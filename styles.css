@@ -59,7 +59,7 @@ nav ul li a.active {
 /* 主内容样式 */
 main {
     padding: 2rem; /* 确保主体内容和导航左边留白一致 */
-    margin-top: 4rem; /* 确保主体内容从最上面开始滑动 */
+    margin-top: 6rem; /* 确保主体内容从最上面开始滑动 */
 }
 
 .projects-header {
@@ -80,7 +80,7 @@ main {
 
 .project-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* 确保文字和图片的上边对齐 */
     gap: 2rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
