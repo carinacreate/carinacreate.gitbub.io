@@ -106,7 +106,9 @@ main {
     gap: 2rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
-    animation: slide-in 0.5s ease-out; /* 添加滑动动画 */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 添加滑动动画 */
 }
 
 .project-info {
@@ -117,7 +119,6 @@ main {
 .project-info h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    animation: bounce-in 0.5s ease-out; /* 添加弹跳动画 */
 }
 
 .project-info ul {
@@ -214,7 +215,7 @@ footer {
     opacity: 1;
 }
 
-/* 添加滑动和弹跳动画 */
+/* 添加滑动动画 */
 @keyframes slide-in {
     from {
         opacity: 0;
@@ -226,11 +227,8 @@ footer {
     }
 }
 
-@keyframes bounce-in {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+/* 触发动画 */
+.project-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
