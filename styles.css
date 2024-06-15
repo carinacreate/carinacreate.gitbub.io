@@ -200,12 +200,4 @@ footer {
 
 .highlight-hover {
     position: relative;
-    display: inline-block;
-}
-
-.highlight-hover::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom
+    display:
