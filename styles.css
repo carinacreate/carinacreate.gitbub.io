@@ -128,19 +128,19 @@ main {
     transform: scale(1.05);
 }
 
-.about-me h1 {
-    font-size: 2.5rem;
+.intro h1 {
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.about-me h2 {
-    font-size: 1.5rem;
+.intro h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
     color: #555;
 }
 
-.about-me p {
-    font-size: 1.125rem;
+.intro p {
+    font-size: 1.25rem;
     margin-bottom: 2rem;
     color: #666;
 }
@@ -148,25 +148,11 @@ main {
 .highlight {
     background-color: #FFEB3B;
     padding: 0.2rem 0.4rem;
+    transition: background-color 0.3s;
 }
 
-.personal-details {
-    text-align: left;
-}
-
-.personal-details h2 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-}
-
-.personal-details ul {
-    list-style: none;
-    padding: 0;
-}
-
-.personal-details ul li {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+.highlight:hover {
+    background-color: #FFD700;
 }
 
 .gallery {
