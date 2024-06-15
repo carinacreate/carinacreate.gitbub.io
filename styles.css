@@ -38,10 +38,17 @@ header {
     margin-bottom: 0.5rem;
 }
 
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem; /* 确保导航右边的留白 */
+}
+
 nav ul {
     display: flex;
     gap: 2rem;
-    margin-right: 2rem; /* 确保导航右边的留白 */
+    margin-right: 4rem; /* 向左移动导航栏的三个文字 */
 }
 
 nav ul li a {
@@ -62,71 +69,58 @@ main {
     margin-top: 6rem; /* 确保主体内容从最上面开始滑动 */
 }
 
-.projects-header {
-    text-align: center;
-    margin-bottom: 2rem;
+/* 固定导航栏样式 */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #000;
 }
 
-.projects-header h1 {
+.header-content {
+    text-align: left;
+}
+
+.header-content h1 {
     font-size: 2rem;
-    color: #333;
-}
-
-.projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.project-item {
-    display: flex;
-    align-items: flex-start; /* 确保文字和图片的上边对齐 */
-    gap: 2rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 2rem;
-}
-
-.project-info {
-    flex: 1;
-}
-
-.project-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.project-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.project-info ul li {
-    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.project-info ul li a {
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem; /* 确保导航右边的留白 */
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    margin-right: 4rem; /* 向左移动导航栏的三个文字 */
+}
+
+nav ul li a {
+    font-size: 1rem;
     color: #000;
     text-decoration: none;
-    display: inline-block;
-    position: relative;
-    transition: color 0.3s, transform 0.3s;
+    transition: color 0.3s;
 }
 
-.project-info ul li a:hover {
-    color: #32CD32; /* 绿色 */
-    transform: scale(1.1);
+nav ul li a:hover,
+nav ul li a.active {
+    color: #007BFF;
 }
 
-.project-item img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.project-item img:hover {
-    transform: scale(1.05);
+/* 主内容样式 */
+main {
+    padding: 2rem; /* 确保主体内容和导航左边留白一致 */
+    margin-top: 6rem; /* 确保主体内容从最上面开始滑动 */
 }
 
 .intro h1 {
@@ -208,7 +202,7 @@ footer {
     gap: 1rem;
 }
 
-.instagram-icon, .email-icon, .phone-icon {
+.instagram-icon, .email-icon {
     font-size: 2rem;
     color: #333;
     transition: color 0.3s;
@@ -221,4 +215,3 @@ footer {
 .email-icon:hover {
     color: #D44638;
 }
-
