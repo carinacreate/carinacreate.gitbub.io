@@ -50,9 +50,8 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: #007BFF;
+nav ul li a:hover {
+    color: #555;
 }
 
 /* 主内容样式，增加顶部间距以适应固定导航栏 */
