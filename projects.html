@@ -1,79 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <h1>ZHANGWENQING</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="projects-header">
-            <h1>Our branding success stories.</h1>
-        </section>
-        <section class="projects-list">
-            <div class="project-item">
-                <div class="project-info">
-                    <h2>3D WORKS</h2>
-                    <ul>
-                        <li><a href="midjourney.html">#01 Midjourney Projects</a></li>
-                        <li><a href="3d.html">#02 3D Projects</a></li>
-                        <li><a href="photographic.html">#03 Photographic Works</a></li>
-                        <li><a href="shortfilm.html">#04 Short Film Works</a></li>
-                    </ul>
-                </div>
-                <img src="images/image1.png" alt="Project 1">
-            </div>
-            <div class="project-item">
-                <div class="project-info">
-                    <h2>ART WORKS</h2>
-                    <ul>
-                        <li><a href="midjourney.html">#01 Midjourney Projects</a></li>
-                        <li><a href="3d.html">#02 3D Projects</a></li>
-                        <li><a href="photographic.html">#03 Photographic Works</a></li>
-                        <li><a href="shortfilm.html">#04 Short Film Works</a></li>
-                    </ul>
-                </div>
-                <img src="images/image2.png" alt="Project 2">
-            </div>
-            <div class="project-item">
-                <div class="project-info">
-                    <h2>WORK EXAMPLES</h2>
-                    <ul>
-                        <li><a href="truesight.html">#05 TRUESIGHT Work Examples</a></li>
-                        <li><a href="xiaomi.html">#06 XIAOMI Work Examples</a></li>
-                        <li><a href="bytedance.html">#07 BYTEDANCE Work Examples</a></li>
-                        <li><a href="metu.html">#08 METU Work Examples</a></li>
-                    </ul>
-                </div>
-                <img src="images/image3.png" alt="Project 3">
-            </div>
-            <div class="project-item">
-                <div class="project-info">
-                    <h2>FASHION JOURNEY</h2>
-                    <ul>
-                        <li><a href="graduation.html">#09 Graduation Project</a></li>
-                        <li><a href="cjyao.html">#10 C.J.YAO Work Examples</a></li>
-                    </ul>
-                </div>
-                <img src="images/image4.png" alt="Project 4">
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>Connect with me on <a href="https://www.instagram.com/carinaazhang/">Instagram</a></p>
-    </footer>
-</body>
-</html>
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #000;
+}
+
+.header-content {
+    text-align: left;
+}
+
+.header-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-content p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projects-header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-info ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-info ul li a {
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.project-info ul li a:hover {
+    color: #32CD32; /* 绿色 */
+    transform: scale(1.1);
+}
+
+.project-item img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #000;
+}
