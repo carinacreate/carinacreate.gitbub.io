@@ -161,6 +161,16 @@ main {
     transform: scale(1.05);
 }
 
+.project-number {
+    font-size: 3rem;
+    color: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+    opacity: 0.1;
+}
+
 /* 固定页脚样式 */
 footer {
     position: fixed;
@@ -194,14 +204,4 @@ footer {
 
 /* Highlight and hover effects */
 .highlight {
-    background-color: #32CD32; /* 绿色 */
-    padding: 0.2rem 0.4rem;
-    transition: background-color 0.3s;
-}
-
-.highlight-hover {
-    position: relative;
-    display: inline-block;
-}
-
-.highlight-hover::
+    background-color: #32CD32
