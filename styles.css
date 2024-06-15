@@ -146,13 +146,31 @@ main {
 }
 
 .highlight {
-    background-color: #FFEB3B;
+    background-color: #32CD32; /* 绿色 */
     padding: 0.2rem 0.4rem;
     transition: background-color 0.3s;
 }
 
-.highlight:hover {
-    background-color: #FFD700;
+.highlight-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.highlight-hover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #32CD32; /* 绿色 */
+    z-index: -1;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.highlight-hover:hover::before {
+    opacity: 1;
 }
 
 .gallery {
@@ -176,5 +194,18 @@ main {
 footer {
     text-align: center;
     padding: 1rem 0;
-    border-top: 1px solid #000;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+}
+
+.instagram-icon {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.instagram-icon:hover {
+    color: #E1306C;
 }
