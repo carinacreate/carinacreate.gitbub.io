@@ -17,9 +17,10 @@ body {
 
 /* Header styles */
 header {
-    text-align: center;
+    background-color: #333;
+    color: #fff;
     padding: 1rem 0;
-    border-bottom: 1px solid #000;
+    text-align: center;
 }
 
 nav ul {
@@ -31,13 +32,13 @@ nav ul {
 
 nav ul li a {
     font-size: 1rem;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #555;
+    color: #aaa;
 }
 
 /* Main content styles */
@@ -47,39 +48,73 @@ main {
     margin: 0 auto;
 }
 
-.portfolio {
+.projects-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projects-header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.projects-list {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-top: 1px solid #000;
-    padding-top: 1rem;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.portfolio-category {
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+.project-info {
     flex: 1;
-    min-width: 200px;
-    margin: 1rem;
 }
 
-.portfolio-category h2 {
+.project-info h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #000;
-    padding-bottom: 0.5rem;
 }
 
-.portfolio-category ul {
+.project-info ul {
     list-style: none;
     padding: 0;
 }
 
-.portfolio-category ul li {
+.project-info ul li {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
+.view-project {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.view-project:hover {
+    background-color: #555;
+}
+
+.project-item img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
 /* Footer styles */
 footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 1rem 0;
     border-top: 1px solid #000;
