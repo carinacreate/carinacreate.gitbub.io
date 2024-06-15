@@ -43,7 +43,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="project-number">01</div>
+                <div class="project-number" data-project="midjourney">01</div>
             </div>
             <div class="project-item" id="work-examples">
                 <div class="project-info">
@@ -63,7 +63,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="project-number">02</div>
+                <div class="project-number" data-project="truesight">02</div>
             </div>
             <div class="project-item" id="fashion-journey">
                 <div class="project-info">
@@ -77,15 +77,80 @@
                         </li>
                     </ul>
                 </div>
-                <div class="project-number">03</div>
+                <div class="project-number" data-project="graduation">03</div>
             </div>
         </section>
         <section class="project-images" id="project-images">
-            <img src="images/image1.png" alt="Image 1">
-            <img src="images/image2.png" alt="Image 2">
-            <img src="images/image3.png" alt="Image 3">
-            <img src="images/image4.png" alt="Image 4">
-            <img src="images/image5.png" alt="Image 5">
+            <div class="project-images-content" id="midjourney">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+                <img src="images/image4.png" alt="Image 4">
+                <img src="images/image5.png" alt="Image 5">
+            </div>
+            <div class="project-images-content" id="3d">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+                <img src="images/image4.png" alt="Image 4">
+                <img src="images/image5.png" alt="Image 5">
+            </div>
+            <div class="project-images-content" id="photographic">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+                <img src="images/image4.png" alt="Image 4">
+                <img src="images/image5.png" alt="Image 5">
+            </div>
+            <div class="project-images-content" id="shortfilm">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+                <img src="images/image4.png" alt="Image 4">
+                <img src="images/image5.png" alt="Image 5">
+            </div>
+            <div class="project-images-content" id="truesight">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+                <img src="images/image4.png" alt="Image 4">
+                <img src="images/image5.png" alt="Image 5">
+            </div>
+            <div class="project-images-content" id="xiaomi">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+                <img src="images/image4.png" alt="Image 4">
+                <img src="images/image5.png" alt="Image 5">
+            </div>
+            <div class="project-images-content" id="bytedance">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+                <img src="images/image4.png" alt="Image 4">
+                <img src="images/image5.png" alt="Image 5">
+            </div>
+            <div class="project-images-content" id="metu">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+                <img src="images/image4.png" alt="Image 4">
+                <img src="images/image5.png" alt="Image 5">
+            </div>
+            <div class="project-images-content" id="graduation">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+                <img src="images/image4.png" alt="Image 4">
+                <img src="images/image5.png" alt="Image 5">
+            </div>
+            <div class="project-images-content" id="cjyao">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+                <img src="images/image4.png" alt="Image 4">
+                <img src="images/image5.png" alt="Image 5">
+            </div>
         </section>
     </main>
     <footer>
@@ -100,33 +165,5 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const items = document.querySelectorAll('.project-item');
-            const projectLinks = document.querySelectorAll('.project-link');
+            const projectNumbers = document.querySelectorAll('.project-number');
             const projectImages = document.getElementById('project-images');
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    } else {
-                        entry.target.classList.remove('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            items.forEach(item => {
-                observer.observe(item);
-            });
-
-            projectLinks.forEach(link => {
-                link.addEventListener('mouseenter', () => {
-                    projectImages.classList.add('show');
-                });
-                link.addEventListener('mouseleave', () => {
-                    projectImages.classList.remove('show');
-                });
-            });
-        });
-    </script>
-</body>
-</html>
