@@ -83,12 +83,6 @@ main {
     gap: 2rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.project-item:hover {
-    background-color: #90ee90; /* 浅绿色 */
-    transform: scale(1.05);
 }
 
 .project-info {
@@ -113,11 +107,12 @@ main {
 .project-info ul li a {
     color: #000;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .project-info ul li a:hover {
-    color: #007BFF;
+    color: #32CD32; /* 绿色 */
+    transform: scale(1.1);
 }
 
 .project-item img {
