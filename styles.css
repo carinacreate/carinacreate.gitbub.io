@@ -48,61 +48,7 @@ nav {
 nav ul {
     display: flex;
     gap: 2rem;
-    margin-right: 4rem; /* 向左移动导航栏的三个文字 */
-}
-
-nav ul li a {
-    font-size: 1rem;
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #007BFF;
-}
-
-/* 主内容样式 */
-main {
-    padding: 2rem; /* 确保主体内容和导航左边留白一致 */
-    margin-top: 6rem; /* 确保主体内容从最上面开始滑动 */
-}
-
-/* 固定导航栏样式 */
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: #fff;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #000;
-}
-
-.header-content {
-    text-align: left;
-}
-
-.header-content h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-nav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2rem; /* 确保导航右边的留白 */
-}
-
-nav ul {
-    display: flex;
-    gap: 2rem;
-    margin-right: 4rem; /* 向左移动导航栏的三个文字 */
+    margin-right: 2rem; /* 向左移动导航栏的三个文字 */
 }
 
 nav ul li a {
