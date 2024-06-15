@@ -128,6 +128,73 @@ main {
     transform: scale(1.05);
 }
 
+.about-me, .photographic-works {
+    display: flex;
+    gap: 2rem;
+}
+
+.about-me-content, .photographic-works-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.about-me-image, .photographic-works-image {
+    flex: 1;
+}
+
+.about-me-details, .photographic-works-details {
+    flex: 2;
+}
+
+.about-me img, .photographic-works img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-me h1, .photographic-works h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-me p, .photographic-works p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.about-me h2, .photographic-works h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-me ul, .photographic-works ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.about-me ul li, .photographic-works ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gallery img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
 /* Footer styles */
 footer {
     text-align: center;
