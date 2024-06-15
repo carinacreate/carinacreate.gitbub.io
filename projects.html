@@ -1,199 +1,87 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Body styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
-    color: #000;
-    line-height: 1.6;
-}
-
-/* 固定导航栏样式 */
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: #fff;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #000;
-}
-
-.header-content {
-    text-align: left;
-}
-
-.header-content h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-nav {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 2rem; /* 确保导航右边的留白 */
-}
-
-nav ul {
-    display: flex;
-    gap: 2rem;
-    margin-right: 2rem; /* 向左移动导航栏的三个文字 */
-}
-
-nav ul li a {
-    font-size: 1rem;
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #32CD32; /* 绿色 */
-    transform: scale(1.1);
-}
-
-/* 主内容样式 */
-main {
-    padding: 2rem; /* 确保主体内容和导航左边留白一致 */
-    margin-top: 6rem; /* 确保主体内容从最上面开始滑动 */
-}
-
-.projects-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.projects-header h1 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.project-item {
-    display: flex;
-    align-items: flex-start; /* 确保文字和图片的上边对齐 */
-    gap: 2rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 2rem;
-}
-
-.project-info {
-    flex: 1;
-    text-align: left; /* 确保文字在左边 */
-}
-
-.project-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.project-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.project-info ul li {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.project-info ul li a {
-    color: #000;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.project-info ul li a:hover {
-    color: #32CD32; /* 绿色 */
-    transform: scale(1.1);
-}
-
-.project-item img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.project-item img:hover {
-    transform: scale(1.05);
-}
-
-/* 固定页脚样式 */
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    background-color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    border-top: 1px solid #ddd;
-}
-
-.footer-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.instagram-icon, .email-icon {
-    font-size: 2rem;
-    color: #333;
-    transition: color 0.3s;
-}
-
-.instagram-icon:hover {
-    color: #E1306C;
-}
-
-.email-icon:hover {
-    color: #D44638;
-}
-
-/* Highlight and hover effects */
-.highlight {
-    background-color: #32CD32; /* 绿色 */
-    padding: 0.2rem 0.4rem;
-    transition: background-color 0.3s;
-}
-
-.highlight-hover {
-    position: relative;
-    display: inline-block;
-}
-
-.highlight-hover::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background-color: #32CD32; /* 绿色 */
-    z-index: -1;
-    transition: opacity 0.3s;
-    opacity: 0;
-}
-
-.highlight-hover:hover::before {
-    opacity: 1;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>ZHANGWENQING</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="projects-header">
+            <h1>Our branding success stories.</h1>
+        </section>
+        <section class="projects-list">
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>3D WORKS</h2>
+                    <ul>
+                        <li><a href="midjourney.html"><span>#01 Midjourney Projects</span></a></li>
+                        <li><a href="3d.html"><span>#02 3D Projects</span></a></li>
+                        <li><a href="photographic.html"><span>#03 Photographic Works</span></a></li>
+                        <li><a href="shortfilm.html"><span>#04 Short Film Works</span></a></li>
+                    </ul>
+                </div>
+                <img src="images/image1.png" alt="Project 1">
+            </div>
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>ART WORKS</h2>
+                    <ul>
+                        <li><a href="midjourney.html"><span>#01 Midjourney Projects</span></a></li>
+                        <li><a href="3d.html"><span>#02 3D Projects</span></a></li>
+                        <li><a href="photographic.html"><span>#03 Photographic Works</span></a></li>
+                        <li><a href="shortfilm.html"><span>#04 Short Film Works</span></a></li>
+                    </ul>
+                </div>
+                <img src="images/image2.png" alt="Project 2">
+            </div>
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>WORK EXAMPLES</h2>
+                    <ul>
+                        <li><a href="truesight.html"><span>#05 TRUESIGHT Work Examples</span></a></li>
+                        <li><a href="xiaomi.html"><span>#06 XIAOMI Work Examples</span></a></li>
+                        <li><a href="bytedance.html"><span>#07 BYTEDANCE Work Examples</span></a></li>
+                        <li><a href="metu.html"><span>#08 METU Work Examples</span></a></li>
+                    </ul>
+                </div>
+                <img src="images/image3.png" alt="Project 3">
+            </div>
+            <div class="project-item">
+                <div class="project-info">
+                    <h2>FASHION JOURNEY</h2>
+                    <ul>
+                        <li><a href="graduation.html"><span>#09 Graduation Project</span></a></li>
+                        <li><a href="cjyao.html"><span>#10 C.J.YAO Work Examples</span></a></li>
+                    </ul>
+                </div>
+                <img src="images/image4.png" alt="Project 4">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/carinaazhang/" class="instagram-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:si.la.pluie@gmail.com" class="email-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
