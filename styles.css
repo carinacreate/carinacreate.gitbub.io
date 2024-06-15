@@ -59,6 +59,7 @@ nav ul li a.active {
 /* 主内容样式 */
 main {
     padding: 2rem; /* 确保主体内容和导航左边留白一致 */
+    margin-top: 4rem; /* 确保主体内容从最上面开始滑动 */
 }
 
 .projects-header {
