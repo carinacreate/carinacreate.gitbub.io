@@ -38,11 +38,6 @@ header {
     margin-bottom: 0.5rem;
 }
 
-.header-content p {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
 nav ul {
     display: flex;
     gap: 2rem;
@@ -55,8 +50,9 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #555;
+nav ul li a:hover,
+nav ul li a.active {
+    color: #007BFF;
 }
 
 /* 主内容样式，增加顶部间距以适应固定导航栏 */
@@ -204,7 +200,13 @@ footer {
     border-top: 1px solid #ddd;
 }
 
-.instagram-icon {
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.instagram-icon, .email-icon, .phone-icon {
     font-size: 2rem;
     color: #333;
     transition: color 0.3s;
@@ -212,4 +214,12 @@ footer {
 
 .instagram-icon:hover {
     color: #E1306C;
+}
+
+.email-icon:hover {
+    color: #D44638;
+}
+
+.phone-icon:hover {
+    color: #34B7F1;
 }
