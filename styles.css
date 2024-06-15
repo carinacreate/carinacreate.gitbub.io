@@ -10,8 +10,8 @@ body, h1, h2, h3, p, ul, li, a {
 /* Body styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1c1c1c;
-    color: #fff;
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
 }
 
@@ -41,58 +41,62 @@ nav ul li a:hover {
     background-color: #333;
 }
 
-/* Hero section styles */
-.hero {
-    text-align: center;
-    padding: 4rem 2rem;
-    background-color: #333;
+/* Main content styles */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.hero h1 {
+/* Projects section styles */
+.projects {
+    text-align: center;
+}
+
+.projects h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    font-family: 'Georgia', serif;
 }
 
-.hero img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+.project-category {
+    margin-bottom: 3rem;
 }
 
-/* Vision section styles */
-.vision {
-    text-align: center;
-    padding: 2rem;
-    background-color: #1c1c1c;
-    border-bottom: 1px solid #333;
-}
-
-.vision h2 {
+.project-category h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+    color: #1c1c1c;
 }
 
-/* Values section styles */
-.values {
+.project-item {
     display: flex;
-    justify-content: space-around;
-    padding: 2rem;
-    background-color: #1c1c1c;
-    border-bottom: 1px solid #333;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.value-item {
-    max-width: 30%;
-    text-align: center;
+.project-item img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 1rem;
 }
 
-.value-item h3 {
+.project-item h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    color: #1c1c1c;
 }
 
-.value-item p {
+.project-item p {
     font-size: 0.9rem;
+    color: #666;
 }
 
 /* Footer styles */
