@@ -104,18 +104,14 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.view-project {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: #fff;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+.project-info ul li a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-.view-project:hover {
-    background-color: #555;
+.project-info ul li a:hover {
+    color: #555;
 }
 
 .project-item img {
