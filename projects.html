@@ -29,63 +29,54 @@
                 <div class="project-info">
                     <h2>ART WORKS</h2>
                     <ul>
-                        <li class="project-link" data-project="midjourney">
-                            <a href="midjourney.html"><span>#01 Midjourney Projects</span></a>
-                        </li>
-                        <li class="project-link" data-project="3d">
-                            <a href="3d.html"><span>#02 3D Projects</span></a>
-                        </li>
-                        <li class="project-link" data-project="photographic">
-                            <a href="photographic.html"><span>#03 Photographic Works</span></a>
-                        </li>
-                        <li class="project-link" data-project="shortfilm">
-                            <a href="shortfilm.html"><span>#04 Short Film Works</span></a>
-                        </li>
+                        <li><a href="midjourney.html"><span>#01 Midjourney Projects</span></a></li>
+                        <li><a href="3d.html"><span>#02 3D Projects</span></a></li>
+                        <li><a href="photographic.html"><span>#03 Photographic Works</span></a></li>
+                        <li><a href="shortfilm.html"><span>#04 Short Film Works</span></a></li>
                     </ul>
                 </div>
                 <div class="project-number">01</div>
+                <div class="project-images">
+                    <img src="images/image1.png" alt="Image 1">
+                    <img src="images/image2.png" alt="Image 2">
+                    <img src="images/image3.png" alt="Image 3">
+                    <img src="images/image4.png" alt="Image 4">
+                </div>
             </div>
             <div class="project-item" id="work-examples">
                 <div class="project-info">
                     <h2>WORK EXAMPLES</h2>
                     <ul>
-                        <li class="project-link" data-project="truesight">
-                            <a href="truesight.html"><span>#05 TRUESIGHT Work Examples</span></a>
-                        </li>
-                        <li class="project-link" data-project="xiaomi">
-                            <a href="xiaomi.html"><span>#06 XIAOMI Work Examples</span></a>
-                        </li>
-                        <li class="project-link" data-project="bytedance">
-                            <a href="bytedance.html"><span>#07 BYTEDANCE Work Examples</span></a>
-                        </li>
-                        <li class="project-link" data-project="metu">
-                            <a href="metu.html"><span>#08 METU Work Examples</span></a>
-                        </li>
+                        <li><a href="truesight.html"><span>#05 TRUESIGHT Work Examples</span></a></li>
+                        <li><a href="xiaomi.html"><span>#06 XIAOMI Work Examples</span></a></li>
+                        <li><a href="bytedance.html"><span>#07 BYTEDANCE Work Examples</span></a></li>
+                        <li><a href="metu.html"><span>#08 METU Work Examples</span></a></li>
                     </ul>
                 </div>
                 <div class="project-number">02</div>
+                <div class="project-images">
+                    <img src="images/image1.png" alt="Image 1">
+                    <img src="images/image2.png" alt="Image 2">
+                    <img src="images/image3.png" alt="Image 3">
+                    <img src="images/image4.png" alt="Image 4">
+                </div>
             </div>
             <div class="project-item" id="fashion-journey">
                 <div class="project-info">
                     <h2>FASHION JOURNEY</h2>
                     <ul>
-                        <li class="project-link" data-project="graduation">
-                            <a href="graduation.html"><span>#09 Graduation Project</span></a>
-                        </li>
-                        <li class="project-link" data-project="cjyao">
-                            <a href="cjyao.html"><span>#10 C.J.YAO Work Examples</span></a>
-                        </li>
+                        <li><a href="graduation.html"><span>#09 Graduation Project</span></a></li>
+                        <li><a href="cjyao.html"><span>#10 C.J.YAO Work Examples</span></a></li>
                     </ul>
                 </div>
                 <div class="project-number">03</div>
+                <div class="project-images">
+                    <img src="images/image1.png" alt="Image 1">
+                    <img src="images/image2.png" alt="Image 2">
+                    <img src="images/image3.png" alt="Image 3">
+                    <img src="images/image4.png" alt="Image 4">
+                </div>
             </div>
-        </section>
-        <section class="project-images" id="project-images">
-            <img src="images/image1.png" alt="Image 1">
-            <img src="images/image2.png" alt="Image 2">
-            <img src="images/image3.png" alt="Image 3">
-            <img src="images/image4.png" alt="Image 4">
-            <img src="images/image5.png" alt="Image 5">
         </section>
     </main>
     <footer>
@@ -101,9 +92,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const items = document.querySelectorAll('.project-item');
-            const projectLinks = document.querySelectorAll('.project-link');
-            const projectImages = document.getElementById('project-images');
-
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -118,12 +106,12 @@
                 observer.observe(item);
             });
 
-            projectLinks.forEach(link => {
-                link.addEventListener('mouseenter', () => {
-                    projectImages.classList.add('show');
+            items.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.querySelector('.project-images').classList.add('show');
                 });
-                link.addEventListener('mouseleave', () => {
-                    projectImages.classList.remove('show');
+                item.addEventListener('mouseleave', () => {
+                    item.querySelector('.project-images').classList.remove('show');
                 });
             });
         });
