@@ -106,6 +106,9 @@ main {
     gap: 2rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
+    opacity: 1; /* 确保项目项可见 */
+    transform: translateY(0); /* 确保项目项位置正确 */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 添加滑动动画 */
 }
 
 .project-info {
@@ -211,3 +214,17 @@ footer {
 .highlight-hover:hover::before {
     opacity: 1;
 }
+
+/* 添加滑动动画 */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
