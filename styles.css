@@ -106,9 +106,14 @@ main {
     gap: 2rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
-    opacity: 1; /* 确保项目项可见 */
-    transform: translateY(0); /* 确保项目项位置正确 */
+    opacity: 0;
+    transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 添加滑动动画 */
+}
+
+.project-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project-info {
@@ -203,28 +208,4 @@ footer {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    top: 0;
-    background-color: #32CD32; /* 绿色 */
-    z-index: -1;
-    transition: opacity 0.3s;
-    opacity: 0;
-}
-
-.highlight-hover:hover::before {
-    opacity: 1;
-}
-
-/* 添加滑动动画 */
-@keyframes slide-in {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/*
+    bottom
