@@ -83,6 +83,11 @@ main {
     gap: 2rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-item:hover {
+    background-color: #f0f0f0;
 }
 
 .project-info {
@@ -111,7 +116,7 @@ main {
 }
 
 .project-info ul li a:hover {
-    color: #555;
+    color: #007BFF;
 }
 
 .project-item img {
