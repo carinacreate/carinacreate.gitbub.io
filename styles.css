@@ -107,7 +107,27 @@ main {
 .project-info ul li a {
     color: #000;
     text-decoration: none;
+    display: inline-block;
+    position: relative;
     transition: color 0.3s, transform 0.3s;
+}
+
+.project-info ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #32CD32; /* 绿色 */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.project-info ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 .project-info ul li a:hover {
