@@ -56,29 +56,12 @@ nav ul li a {
     color: #000;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
-    position: relative;
-}
-
-nav ul li a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background-color: #32CD32; /* 绿色 */
-    z-index: -1;
-    transition: opacity 0.3s;
-    opacity: 0;
-}
-
-nav ul li a:hover::before {
-    opacity: 1;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
     color: #32CD32; /* 绿色 */
+    transform: scale(1.1);
 }
 
 /* 主内容样式 */
@@ -137,23 +120,6 @@ main {
     display: inline-block;
     position: relative;
     transition: color 0.3s, transform 0.3s;
-}
-
-.project-info ul li a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background-color: #32CD32; /* 绿色 */
-    z-index: -1;
-    transition: opacity 0.3s;
-    opacity: 0;
-}
-
-.project-info ul li a:hover::before {
-    opacity: 1;
 }
 
 .project-info ul li a:hover {
