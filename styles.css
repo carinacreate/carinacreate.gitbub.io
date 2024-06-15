@@ -204,46 +204,52 @@ footer {
     display: inline-block;
 }
 
-/* 响应式设计 */
+.highlight-hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.2rem;
+    background-color: #32CD32; /* 绿色 */
+    transition: transform 0.3s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.highlight-hover:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
+        align-items: flex-start;
         padding: 1rem;
+    }
+
+    .header-content {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
     }
 
     nav {
         padding-right: 0;
+        width: 100%;
+        justify-content: center;
     }
 
     nav ul {
         flex-direction: column;
         gap: 1rem;
         margin-right: 0;
-        margin-top: 1rem;
     }
 
-    nav ul li {
-        text-align: center;
-    }
-
-    .projects-list {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .project-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .project-item img {
-        max-width: 100%;
-    }
-
-    main {
-        padding: 1rem;
-        margin-top: 8rem; /* 增加顶部间距以适应导航栏 */
+    nav ul li a {
+        font-size: 1.2rem;
     }
 }
 
@@ -253,7 +259,7 @@ footer {
     }
 
     nav ul li a {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .projects-header h1 {
@@ -268,7 +274,12 @@ footer {
         font-size: 0.9rem;
     }
 
-    .footer-icons a {
-        font-size: 1.5rem;
+    .project-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-item img {
+        max-width: 100%;
     }
 }
