@@ -36,6 +36,12 @@
                     </ul>
                 </div>
                 <div class="project-number">01</div>
+                <div class="project-images">
+                    <img src="images/image1.png" alt="Image 1">
+                    <img src="images/image2.png" alt="Image 2">
+                    <img src="images/image3.png" alt="Image 3">
+                    <img src="images/image4.png" alt="Image 4">
+                </div>
             </div>
             <div class="project-item" id="work-examples">
                 <div class="project-info">
@@ -48,6 +54,12 @@
                     </ul>
                 </div>
                 <div class="project-number">02</div>
+                <div class="project-images">
+                    <img src="images/image1.png" alt="Image 1">
+                    <img src="images/image2.png" alt="Image 2">
+                    <img src="images/image3.png" alt="Image 3">
+                    <img src="images/image4.png" alt="Image 4">
+                </div>
             </div>
             <div class="project-item" id="fashion-journey">
                 <div class="project-info">
@@ -58,6 +70,12 @@
                     </ul>
                 </div>
                 <div class="project-number">03</div>
+                <div class="project-images">
+                    <img src="images/image1.png" alt="Image 1">
+                    <img src="images/image2.png" alt="Image 2">
+                    <img src="images/image3.png" alt="Image 3">
+                    <img src="images/image4.png" alt="Image 4">
+                </div>
             </div>
         </section>
     </main>
@@ -86,6 +104,15 @@
 
             items.forEach(item => {
                 observer.observe(item);
+            });
+
+            items.forEach(item => {
+                item.addEventListener('mouseenter', () => {
+                    item.querySelector('.project-images').classList.add('show');
+                });
+                item.addEventListener('mouseleave', () => {
+                    item.querySelector('.project-images').classList.remove('show');
+                });
             });
         });
     </script>
