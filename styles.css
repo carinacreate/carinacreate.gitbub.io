@@ -87,8 +87,8 @@ main {
 }
 
 .project-item:hover {
-    background-color: #e0f7e0;
-    transform: scale(1.02);
+    background-color: #90ee90; /* 浅绿色 */
+    transform: scale(1.05);
 }
 
 .project-info {
