@@ -98,6 +98,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    position: relative;
 }
 
 .project-item {
@@ -200,4 +201,7 @@ footer {
 
 .highlight-hover {
     position: relative;
-    display:
+    display: inline-block;
+}
+
+.highlight-hover::
