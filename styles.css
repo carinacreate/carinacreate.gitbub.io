@@ -9,18 +9,19 @@ body, h1, h2, h3, p, ul, li, a {
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
     line-height: 1.6;
 }
 
 /* Header styles */
 header {
-    background-color: #333;
+    background-color: #1c1c1c;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    border-bottom: 1px solid #333;
 }
 
 nav ul {
@@ -37,58 +38,68 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #333;
 }
 
-/* Main content styles */
-main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Hero section styles */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #333;
 }
 
-section {
+.hero h1 {
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
-.welcome {
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Vision section styles */
+.vision {
     text-align: center;
-    background-color: #e2e2e2;
     padding: 2rem;
-    border-radius: 8px;
+    background-color: #1c1c1c;
+    border-bottom: 1px solid #333;
 }
 
-.intro, .projects-preview {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.intro h2, .projects-preview h2 {
+.vision h2 {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: #fff;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+/* Values section styles */
+.values {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #1c1c1c;
+    border-bottom: 1px solid #333;
 }
 
-.btn:hover {
-    background-color: #555;
+.value-item {
+    max-width: 30%;
+    text-align: center;
+}
+
+.value-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.value-item p {
+    font-size: 0.9rem;
 }
 
 /* Footer styles */
 footer {
-    background-color: #333;
+    background-color: #1c1c1c;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    border-top: 1px solid #333;
 }
