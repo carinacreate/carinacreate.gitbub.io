@@ -18,7 +18,7 @@ body {
 /* Header styles */
 header {
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid #000;
 }
 
@@ -38,16 +38,6 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #555;
-}
-
-.header-content h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.header-content p {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
 }
 
 /* Main content styles */
