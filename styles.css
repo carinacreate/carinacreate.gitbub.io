@@ -69,65 +69,71 @@ main {
     margin-top: 6rem; /* 确保主体内容从最上面开始滑动 */
 }
 
-.intro h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.intro h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #555;
-}
-
-.intro p {
-    font-size: 1.25rem;
+.projects-header {
+    text-align: center;
     margin-bottom: 2rem;
-    color: #666;
 }
 
-.highlight {
-    background-color: #32CD32; /* 绿色 */
-    padding: 0.2rem 0.4rem;
-    transition: background-color 0.3s;
+.projects-header h1 {
+    font-size: 2rem;
+    color: #333;
 }
 
-.highlight-hover {
-    position: relative;
-    display: inline-block;
-}
-
-.highlight-hover::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background-color: #32CD32; /* 绿色 */
-    z-index: -1;
-    transition: opacity 0.3s;
-    opacity: 0;
-}
-
-.highlight-hover:hover::before {
-    opacity: 1;
-}
-
-.gallery {
+.projects-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.gallery img {
-    max-width: 200px;
+.project-item {
+    display: flex;
+    align-items: flex-start; /* 确保文字和图片的上边对齐 */
+    gap: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+.project-info {
+    flex: 1;
+    text-align: left; /* 确保文字在左边 */
+}
+
+.project-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-info ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-info ul li a {
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.project-info ul li a:hover {
+    color: #32CD32; /* 绿色 */
+    transform: scale(1.1);
+}
+
+.project-item img {
+    max-width: 300px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
-.gallery img:hover {
+.project-item img:hover {
     transform: scale(1.05);
 }
 
