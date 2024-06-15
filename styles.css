@@ -106,6 +106,7 @@ main {
     gap: 2rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
+    animation: slide-in 0.5s ease-out; /* 添加滑动动画 */
 }
 
 .project-info {
@@ -116,6 +117,7 @@ main {
 .project-info h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    animation: bounce-in 0.5s ease-out; /* 添加弹跳动画 */
 }
 
 .project-info ul {
@@ -210,4 +212,25 @@ footer {
 
 .highlight-hover:hover::before {
     opacity: 1;
+}
+
+/* 添加滑动和弹跳动画 */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-in {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
