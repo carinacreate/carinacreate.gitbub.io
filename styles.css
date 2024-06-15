@@ -15,8 +15,13 @@ body {
     line-height: 1.6;
 }
 
-/* Header styles */
+/* 固定导航栏样式 */
 header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,11 +59,9 @@ nav ul li a:hover {
     color: #555;
 }
 
-/* Main content styles */
+/* 主内容样式，增加顶部间距以适应固定导航栏 */
 main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 6rem auto 4rem; /* 增加顶部间距以适应固定导航栏 */
 }
 
 .projects-header {
@@ -190,17 +193,18 @@ main {
     transform: scale(1.05);
 }
 
-/* Footer styles */
+/* 固定页脚样式 */
 footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
     text-align: center;
     padding: 1rem 0;
     border-top: 1px solid #ddd;
-    margin-top: 2rem;
 }
 
 .instagram-icon {
-    display: inline-block;
-    margin-top: 1rem;
     font-size: 2rem;
     color: #333;
     transition: color 0.3s;
