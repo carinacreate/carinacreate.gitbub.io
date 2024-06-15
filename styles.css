@@ -83,11 +83,12 @@ main {
     gap: 2rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .project-item:hover {
-    background-color: #f0f0f0;
+    background-color: #e0f7e0;
+    transform: scale(1.02);
 }
 
 .project-info {
