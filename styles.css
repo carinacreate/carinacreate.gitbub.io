@@ -10,10 +10,9 @@ body, h1, h2, h3, p, ul, li, a {
 /* Body styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #fff;
+    color: #000;
     line-height: 1.6;
-    padding: 0 2rem;
 }
 
 /* Header styles */
@@ -21,67 +20,47 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #000;
+}
+
+.header-content {
+    text-align: left;
 }
 
 .header-content h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-content p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 nav ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 nav ul li a {
     font-size: 1rem;
-    color: #333;
+    color: #000;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: #007BFF;
+nav ul li a:hover {
+    color: #555;
 }
 
 /* Main content styles */
 main {
-    max-width: 800px;
-    margin: 2rem auto;
-    text-align: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.intro h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.intro h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #555;
-}
-
-.intro p {
-    font-size: 1.125rem;
-    margin-bottom: 2rem;
-    color: #666;
-}
-
-.highlight {
-    background-color: #FFEB3B;
-    padding: 0.2rem 0.4rem;
-    transition: background-color 0.3s;
-}
-
-.highlight:hover {
-    background-color: #FFD700;
-}
-
-/* Projects styles */
 .projects-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -149,7 +128,6 @@ main {
     transform: scale(1.05);
 }
 
-/* About Me styles */
 .about-me h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -165,6 +143,11 @@ main {
     font-size: 1.125rem;
     margin-bottom: 2rem;
     color: #666;
+}
+
+.highlight {
+    background-color: #FFEB3B;
+    padding: 0.2rem 0.4rem;
 }
 
 .personal-details {
@@ -186,7 +169,6 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/* Gallery styles */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -208,6 +190,5 @@ main {
 footer {
     text-align: center;
     padding: 1rem 0;
-    border-top: 1px solid #ddd;
-    margin-top: 2rem;
+    border-top: 1px solid #000;
 }
