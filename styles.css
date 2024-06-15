@@ -128,52 +128,54 @@ main {
     transform: scale(1.05);
 }
 
-.about-me, .photographic-works {
+.about-me {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
-.about-me-content, .photographic-works-content {
+.about-me-content {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
-.about-me-image, .photographic-works-image {
+.about-me-image {
     flex: 1;
 }
 
-.about-me-details, .photographic-works-details {
+.about-me-details {
     flex: 2;
 }
 
-.about-me img, .photographic-works img {
+.about-me img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.about-me h1, .photographic-works h1 {
+.about-me h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.about-me p, .photographic-works p {
+.about-me p {
     font-size: 1rem;
     margin-bottom: 1rem;
 }
 
-.about-me h2, .photographic-works h2 {
+.about-me h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
-.about-me ul, .photographic-works ul {
+.about-me ul {
     list-style: none;
     padding: 0;
     margin-bottom: 1rem;
 }
 
-.about-me ul li, .photographic-works ul li {
+.about-me ul li {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
