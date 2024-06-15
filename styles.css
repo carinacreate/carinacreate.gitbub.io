@@ -17,19 +17,15 @@ body {
 
 /* Header styles */
 header {
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     border-bottom: 1px solid #000;
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
 }
 
 nav ul {
     display: flex;
-    justify-content: flex-end;
     gap: 2rem;
-    margin-bottom: 1rem;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
 }
 
 nav ul li a {
