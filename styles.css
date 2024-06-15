@@ -41,6 +41,7 @@ header {
 nav ul {
     display: flex;
     gap: 2rem;
+    margin-right: 2rem; /* 确保导航右边的留白 */
 }
 
 nav ul li a {
@@ -50,13 +51,14 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #555;
+nav ul li a:hover,
+nav ul li a.active {
+    color: #007BFF;
 }
 
-/* 主内容样式，增加顶部间距以适应固定导航栏 */
+/* 主内容样式 */
 main {
-    margin: 6rem auto 4rem; /* 增加顶部间距以适应固定导航栏 */
+    padding: 2rem; /* 确保主体内容和导航左边留白一致 */
 }
 
 .projects-header {
