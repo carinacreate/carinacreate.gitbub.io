@@ -296,7 +296,7 @@ footer {
 /* 主页页脚样式 */
 footer.home-footer p {
     font-size: 0.75rem; /* 调整版权文字大小 */
-    color: #fff; /* 主页版权文字颜色为白色 */
+    color: #000; /* 主页版权文字颜色为白色 */
     margin: 0; /* 确保没有额外的外边距 */
 }
 
@@ -350,16 +350,34 @@ footer.other-footer p {
         margin-right: 0;
         width: 100%;
         justify-content: flex-start; /* 左对齐 */
+        border-top: 1px solid #000; /* 增加顶部线条 */
     }
 
     nav ul li {
         flex: 1; /* 平均分配宽度 */
+        height: 45px; /* 确保导航栏高度一致 */
+        border-right: 1px solid #000; /* 增加右边线条 */
+    }
+
+    nav ul li:last-child {
+        border-right: none; /* 移除最后一个元素的右边线条 */
     }
 
     nav ul li a {
         font-size: 1rem; /* 调整字体大小 */
-        padding: 0.5rem; /* 调整内边距 */
-        text-align: left; /* 左对齐 */
+        padding: 0 1rem; /* 调整内边距 */
+        height: 100%; /* 使链接高度与导航栏一致 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent; /* 背景透明 */
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        background-color: #4A7C59; /* 使用图片中的绿色 */
+        color: #fff; /* 选中时文字颜色为白色 */
+        height: 100%; /* 确保绿色背景高度一致 */
     }
 
     .intro {
