@@ -335,6 +335,83 @@ main {
     transform: scale(1.05);
 }
 
+/* 联系表单样式 */
+.contact-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-form form {
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--hover-color);
+}
+
+/* 自适应表单设计 */
+@media (max-width: 768px) {
+    .contact-form form {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form form {
+        padding: 0.5rem;
+    }
+}
+
 /* 动画效果 */
 @keyframes fadeInUp {
     from {
@@ -410,6 +487,42 @@ footer.other-footer p {
     font-size: 0.75rem;
     color: var(--font-color);
     margin: 0;
+}
+    /* 自适应页脚 */
+    footer {
+        position: static; /* 取消固定 */
+        border-top: none; /* 取消横线 */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.25rem;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+        color: var(--primary-color);
+    }
+
+    .intro h1 .highlight {
+        color: var(--highlight-color);
+    }
+
+    .intro h2 {
+        font-size: 24px;
+        color: var(--primary-color);
+    }
+
+    .intro p {
+        font-size: 14px;
+        color: var(--font-color);
+    }
 }
 
 /* 自适应设计 */
@@ -537,39 +650,3 @@ footer.other-footer p {
     }
 }
 
-    /* 自适应页脚 */
-    footer {
-        position: static; /* 取消固定 */
-        border-top: none; /* 取消横线 */
-    }
-}
-
-@media (max-width: 480px) {
-    .header-content h1 {
-        font-size: 1.25rem;
-    }
-
-    nav ul li a {
-        font-size: 0.75rem;
-        padding: 0.5rem;
-    }
-
-    .intro h1 {
-        font-size: 32px;
-        color: var(--primary-color);
-    }
-
-    .intro h1 .highlight {
-        color: var(--highlight-color);
-    }
-
-    .intro h2 {
-        font-size: 24px;
-        color: var(--primary-color);
-    }
-
-    .intro p {
-        font-size: 14px;
-        color: var(--font-color);
-    }
-}
