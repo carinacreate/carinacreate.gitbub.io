@@ -133,7 +133,7 @@ nav ul li a.active {
 /* 视频交叠渐变效果 */
 @keyframes crossfade {
     0% {
-        opacity: 1;
+        opacity: 0.3;
     }
     100% {
         opacity: 0;
