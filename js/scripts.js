@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
+        link.addEventListener('mouseleave', function() {
+            projectImages.forEach(img => {
+                img.classList.remove('active');
+            });
+            document.getElementById('image1').classList.add('active');
+        });
     });
 
     // 默认显示第一个项目的图片
