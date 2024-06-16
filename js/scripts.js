@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const projectItems = document.querySelectorAll('.project-item');
+    const projectCategories = document.querySelectorAll('.project-category');
     const projectImages = document.querySelectorAll('.project-image');
 
-    projectItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
+    projectCategories.forEach(category => {
+        category.addEventListener('mouseenter', function() {
             const id = this.id;
             projectImages.forEach(img => {
                 if (img.id === `image-${id}`) {
