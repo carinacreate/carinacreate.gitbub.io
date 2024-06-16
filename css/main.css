@@ -279,6 +279,7 @@ html, body {
     gap: 2rem;
     height: 100%; /* 确保内容区域占满整个页面 */
     overflow: hidden; /* 禁止内容区域滚动 */
+    align-items: center; /* 确保内容上下居中 */
 }
 
 .projects-list {
@@ -289,6 +290,7 @@ html, body {
     text-align: left; /* 确保文字靠左 */
     overflow-y: auto; /* 允许项目列表内部滚动 */
     padding-right: 1rem; /* 添加内边距以避免滚动条覆盖内容 */
+    justify-content: center; /* 确保文字上下居中 */
 }
 
 .project-category {
@@ -316,12 +318,14 @@ html, body {
     display: inline-block;
     position: relative;
     transition: color 0.3s, transform 0.3s;
+    white-space: nowrap; /* 确保文字不换行 */
 }
 
 .project-category ul li a:hover,
 .project-category ul li a.active {
     color: var(--primary-color); /* 文字变绿 */
     transform: scale(1.1); /* 文字放大效果 */
+    z-index: 1; /* 确保文字放大时不被裁切 */
 }
 
 .projects-images {
@@ -330,8 +334,8 @@ html, body {
     flex-direction: column;
     gap: 1rem; /* 调整间距 */
     align-items: flex-end; /* 确保图片靠右 */
+    justify-content: center; /* 确保图片上下居中 */
     position: relative; /* 确保图片位置固定 */
-    overflow: hidden; /* 禁止图片区域滚动 */
 }
 
 .project-image {
@@ -341,6 +345,7 @@ html, body {
     transition: transform 0.3s ease, opacity 0.3s ease; /* 添加过渡效果 */
     opacity: 0; /* 初始隐藏 */
     position: absolute; /* 确保图片位置固定 */
+    right: 0; /* 确保图片右对齐 */
 }
 
 .project-image.active {
