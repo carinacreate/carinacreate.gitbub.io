@@ -27,7 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem; /* 调整导航栏高度 */
     border-bottom: 1px solid #000;
 }
 
@@ -36,7 +36,7 @@ header {
 }
 
 .header-content h1 {
-    font-size: 2rem;
+    font-size: 1.5rem; /* 调整标题字体大小 */
     margin-bottom: 0.5rem;
 }
 
@@ -44,13 +44,13 @@ nav {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    padding-right: 2rem; /* 确保导航右边的留白 */
+    padding-right: 1rem; /* 确保导航右边的留白 */
 }
 
 nav ul {
     display: flex;
-    gap: 2rem;
-    margin-right: 2rem; /* 向左移动导航栏的三个文字 */
+    gap: 1rem;
+    margin-right: 1rem; /* 向左移动导航栏的三个文字 */
 }
 
 nav ul li {
@@ -58,7 +58,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 1rem;
+    font-size: 0.875rem; /* 调整导航链接字体大小 */
     color: #000;
     text-decoration: none;
     transition: color 0.3s, transform 0.3s;
@@ -83,7 +83,7 @@ nav ul li a.active {
 /* 主内容样式 */
 main {
     padding: 2rem; /* 确保主体内容和导航左边留白一致 */
-    margin-top: 6rem; /* 确保主体内容从最上面开始滑动 */
+    margin-top: 4rem; /* 确保主体内容从最上面开始滑动 */
 }
 
 .intro {
@@ -213,13 +213,17 @@ main {
 
 /* 固定页脚样式 */
 footer {
-    background-color: #333;
+    background-color: #2F4F4F; /* 灰绿色背景 */
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0; /* 调整页脚高度 */
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+footer p {
+    font-size: 0.75rem; /* 调整版权文字大小 */
 }
 
 /* 动画效果 */
@@ -236,4 +240,90 @@ footer {
 
 .project-item.visible {
     animation: fadeInUp 0.6s ease-out;
+}
+
+/* 自适应设计 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+    }
+
+    .header-content {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    nav {
+        padding-right: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-right: 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.25rem;
+    }
+
+    nav ul li a {
+        font-size: 0.875rem;
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro h2 {
+        font-size: 1.25rem;
+    }
+
+    .intro p {
+        font-size: 0.875rem;
+    }
+
+    .projects-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-info ul li {
+        font-size: 0.9rem;
+    }
+
+    .project-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-item img {
+        max-width: 100%;
+    }
 }
