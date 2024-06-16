@@ -168,6 +168,7 @@ main {
     font-weight: normal;
     line-height: 1.6;
     margin-bottom: 0.25rem; /* 进一步缩短段落间距 */
+    color: #000; /* 将文字颜色改为黑色 */
 }
 
 .intro .highlight {
@@ -340,7 +341,7 @@ footer.other-footer p {
     header {
         flex-direction: column; /* 导航栏分为两行 */
         align-items: flex-start; /* 所有内容左对齐 */
-        padding: 0.5rem 1rem; /* 调整导航栏高度 */
+        padding: 0; /* 移除内边距 */
         height: auto; /* 自动高度 */
         background-color: transparent; /* 底边背景设置为透明 */
     }
@@ -348,31 +349,35 @@ footer.other-footer p {
     .header-content {
         width: 100%;
         text-align: left;
-        margin-bottom: 0.5rem; /* 增加行间距 */
+        padding: 0.5rem 1rem; /* 调整内边距 */
+        border-bottom: 1px solid #000; /* 增加底部线条 */
+        height: 45px; /* 确保高度一致 */
     }
 
     nav {
         width: 100%;
-        padding-right: 0;
+        padding: 0 1rem; /* 调整内边距 */
+        border-top: 1px solid #000; /* 增加顶部线条 */
     }
 
     nav ul {
+        display: flex;
         flex-direction: row;
         gap: 0.5rem;
-        margin-right: 0;
+        margin: 0;
+        padding: 0;
         width: 100%;
         justify-content: flex-start; /* 左对齐 */
-        border-top: 1px solid #000; /* 增加顶部线条 */
+        height: 45px; /* 确保高度一致 */
     }
 
     nav ul li {
         flex: 1; /* 平均分配宽度 */
-        height: 45px; /* 确保导航栏高度一致 */
+        height: 100%; /* 确保高度一致 */
         border-right: 1px solid #000; /* 增加右边线条 */
     }
 
     nav ul li:last-child {
-        height: 45px; /* 确保导航栏高度一致 */
         border-right: none; /* 移除最后一个元素的右边线条 */
     }
 
@@ -402,16 +407,19 @@ footer.other-footer p {
     .intro h1 {
         font-size: 36px; /* 调整 h1 的字体大小 */
         margin-bottom: 0.5rem; /* 增加与第二句的距离 */
+        color: #000; /* 将文字颜色改为黑色 */
     }
 
     .intro h2 {
         font-size: 28px; /* 调整 h2 的字体大小 */
         margin-bottom: 0.5rem; /* 增加与下一段的距离 */
+        color: #000; /* 将文字颜色改为黑色 */
     }
 
     .intro p {
         font-size: 16px; /* 调整 p 的字体大小 */
         margin-bottom: 0.5rem; /* 增加段落间距 */
+        color: #000; /* 将文字颜色改为黑色 */
     }
 }
 
@@ -427,13 +435,16 @@ footer.other-footer p {
 
     .intro h1 {
         font-size: 32px; /* 调整 h1 的字体大小 */
+        color: #000; /* 将文字颜色改为黑色 */
     }
 
     .intro h2 {
         font-size: 24px; /* 调整 h2 的字体大小 */
+        color: #000; /* 将文字颜色改为黑色 */
     }
 
     .intro p {
         font-size: 14px; /* 调整 p 的字体大小 */
+        color: #000; /* 将文字颜色改为黑色 */
     }
 }
