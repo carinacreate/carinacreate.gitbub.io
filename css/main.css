@@ -258,6 +258,12 @@ main {
 }
 
 /* 项目页面样式 */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* 禁止页面滚动 */
+}
+
 .projects-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -271,6 +277,8 @@ main {
 .projects-content {
     display: flex;
     gap: 2rem;
+    height: 100%; /* 确保内容区域占满整个页面 */
+    overflow: hidden; /* 禁止内容区域滚动 */
 }
 
 .projects-list {
@@ -279,6 +287,8 @@ main {
     flex-direction: column;
     gap: 1rem; /* 调整间距 */
     text-align: left; /* 确保文字靠左 */
+    overflow-y: auto; /* 允许项目列表内部滚动 */
+    padding-right: 1rem; /* 添加内边距以避免滚动条覆盖内容 */
 }
 
 .project-category {
@@ -321,6 +331,7 @@ main {
     gap: 1rem; /* 调整间距 */
     align-items: flex-end; /* 确保图片靠右 */
     position: relative; /* 确保图片位置固定 */
+    overflow: hidden; /* 禁止图片区域滚动 */
 }
 
 .project-image {
