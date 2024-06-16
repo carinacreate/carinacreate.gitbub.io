@@ -58,9 +58,10 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 0.875rem; /* 调整导航链接字体大小 */
+    font-size: 1rem; /* 调整导航链接字体大小 */
     color: #000;
     text-decoration: none;
+    font-weight: bold; /* 设置粗体 */
     transition: color 0.3s, transform 0.3s;
     display: inline-block;
 }
