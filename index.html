@@ -22,6 +22,7 @@
         </nav>
     </header>
     <main>
+        <div class="video-overlay"></div>
         <video autoplay muted loop id="background-video">
             <source src="videos/index-videos/index-video1.mov" type="video/mp4">
             Your browser does not support the video tag.
@@ -35,5 +36,9 @@
     <footer>
         <p>&copy; 2024 ZHANGWENQING. All rights reserved.</p>
     </footer>
+    <script>
+        // 设置视频播放速度为慢动作
+        document.getElementById('background-video').playbackRate = 0.5;
+    </script>
 </body>
 </html>
