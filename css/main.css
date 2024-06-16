@@ -94,7 +94,7 @@ nav ul li a.active {
     min-width: 100%;
     min-height: 100%;
     z-index: -2; /* 确保视频在所有内容的后面 */
-    opacity: 0;
+    opacity: 0.3;
     animation: fadeIn 2s forwards; /* 渐隐渐显效果 */
 }
 
