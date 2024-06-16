@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const imageId = this.getAttribute('data-image');
             projectImages.forEach(img => {
                 if (img.id === imageId) {
-                    img.style.display = 'block';
+                    img.classList.add('active');
                 } else {
-                    img.style.display = 'none';
+                    img.classList.remove('active');
                 }
             });
         });
@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // 默认显示第一个项目的图片
     projectImages.forEach(img => {
         if (img.id === 'image1') {
-            img.style.display = 'block';
+            img.classList.add('active');
         } else {
-            img.style.display = 'none';
+            img.classList.remove('active');
         }
     });
 });
