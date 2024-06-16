@@ -80,6 +80,10 @@ nav ul li a.active {
 main {
     padding: 2rem; /* 确保主体内容和导航左边留白一致 */
     margin-top: 45px; /* 确保主体内容从最上面开始滑动 */
+    background-image: url('path/to/your/image.jpg'); /* 添加背景图片 */
+    background-size: cover; /* 确保背景图片覆盖整个区域 */
+    background-position: center; /* 背景图片居中 */
+    background-repeat: no-repeat; /* 背景图片不重复 */
 }
 
 .intro {
@@ -348,16 +352,4 @@ footer p {
     }
 
     .projects-header h1 {
-        font-size: 1.5rem;
-    }
-
-    .project-info h2 {
-        font-size: 1.2rem;
-    }
-
-    .project-info ul li {
-        font-size: 0.9rem;
-    }
-
-    .project-item {
-        flex-direction: column;
+        font
