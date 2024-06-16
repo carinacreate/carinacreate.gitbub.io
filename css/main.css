@@ -54,11 +54,13 @@ nav ul {
     margin: 0;
     padding: 0;
     border-left: 1px solid #000; /* 左边线条 */
+    height: 100%; /* 确保导航栏高度一致 */
 }
 
 nav ul li {
     position: relative;
     border-right: 1px solid #000; /* 右边线条 */
+    height: 100%; /* 确保导航栏高度一致 */
 }
 
 nav ul li a {
@@ -67,12 +69,11 @@ nav ul li a {
     text-decoration: none;
     transition: background-color 0.3s;
     display: inline-block;
-    padding: 0.5rem 1rem; /* 增加内边距 */
+    padding: 0 1rem; /* 调整内边距 */
     height: 100%; /* 使链接高度与导航栏一致 */
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px; /* 确保每个链接形成正方形 */
 }
 
 nav ul li a:hover,
@@ -345,4 +346,7 @@ footer p {
     }
 
     .intro h1 {
-        font-size: 1.5
+        font-size: 1.5rem;
+    }
+
+    .intro h2 {
