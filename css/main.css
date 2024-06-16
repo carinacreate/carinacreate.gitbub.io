@@ -110,7 +110,7 @@ nav ul li a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.3); /* 半透明白色 */
+    background: rgba(0, 0, 0, 0.3); /* 半透明黑色 */
     backdrop-filter: blur(10px); /* 磨砂效果 */
     z-index: -1; /* 确保在视频上方，内容下方 */
 }
@@ -286,13 +286,19 @@ main {
 
 /* 页脚样式 */
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff; /* 背景颜色 */
     text-align: center;
     padding: 10px 0; /* 调整页脚高度 */
+    border-top: 1px solid #000; /* 页脚顶部的线条 */
 }
 
 footer p {
     font-size: 0.75rem; /* 调整版权文字大小 */
     color: #000; /* 版权文字颜色为黑色 */
+    margin: 0; /* 确保没有额外的外边距 */
 }
 
 /* 动画效果 */
