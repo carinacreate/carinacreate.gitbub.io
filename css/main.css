@@ -58,17 +58,18 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 1rem; /* 调整导航链接字体大小 */
+    font-size: 1.25rem; /* 调整导航链接字体大小 */
     color: #000;
     text-decoration: none;
     font-weight: bold; /* 设置粗体 */
     transition: color 0.3s, transform 0.3s;
     display: inline-block;
+    padding-bottom: 0.2rem; /* 增加底部间距 */
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #32CD32; /* 绿色 */
+    color: #4A7C59; /* 使用图片中的绿色 */
     animation: bounce 0.5s ease;
 }
 
@@ -88,24 +89,29 @@ main {
 }
 
 .intro {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 50px 20px;
 }
 
 .intro h1 {
     font-size: 2.5rem; /* 调整 h1 的字体大小 */
+    color: #000;
 }
 
 .intro h2 {
     font-size: 2rem; /* 调整 h2 的字体大小 */
+    color: #000;
 }
 
 .intro p {
     font-size: 1.25rem; /* 调整 p 的字体大小 */
+    color: #000;
 }
 
 .intro .highlight {
-    background-color: #32CD32; /* 绿色背景 */
+    background-color: #4A7C59; /* 使用图片中的绿色背景 */
     color: #000; /* 黑色文字 */
     padding: 0.2rem 0.4rem;
     transition: background-color 0.3s;
@@ -123,7 +129,7 @@ main {
     left: 0;
     right: 0;
     height: 0.2rem;
-    background-color: #32CD32; /* 绿色 */
+    background-color: #4A7C59; /* 使用图片中的绿色 */
     transition: transform 0.3s;
     transform: scaleX(0);
     transform-origin: right;
@@ -197,7 +203,7 @@ main {
 }
 
 .project-info ul li a:hover {
-    color: #32CD32; /* 绿色 */
+    color: #4A7C59; /* 使用图片中的绿色 */
     transform: scale(1.1);
 }
 
@@ -214,7 +220,7 @@ main {
 
 /* 固定页脚样式 */
 footer {
-    background-color: rgba(50, 205, 50, 0.5); /* 绿色背景，50%透明度 */
+    background-color: #000; /* 黑色背景 */
     color: #fff;
     text-align: center;
     padding: 5px 0; /* 调整页脚高度 */
@@ -224,7 +230,7 @@ footer {
 }
 
 footer p {
-    font-size: 0.625rem; /* 调整版权文字大小 */
+    font-size: 0.5rem; /* 调整版权文字大小 */
 }
 
 /* 动画效果 */
@@ -271,6 +277,11 @@ footer p {
 
     nav ul li a {
         font-size: 0.75rem;
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: center;
     }
 
     .intro h1 {
