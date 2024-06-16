@@ -143,7 +143,7 @@ main {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 添加滑动动画 */
-    margin-top: -50px; /* 整体向上挪动一些 */
+    margin-top: -100px; /* 整体向上挪动一些 */
 }
 
 .intro.visible {
