@@ -363,12 +363,14 @@ footer.other-footer p {
     nav ul {
         display: flex;
         flex-direction: row;
-        gap: 0.5rem;
+        gap: 0;
         margin: 0;
         padding: 0;
         width: 100%;
         justify-content: space-between; /* 左右留白一样多 */
         height: 45px; /* 确保高度一致 */
+        border-top: 1px solid var(--font-color); /* 增加顶部线条 */
+        border-bottom: 1px solid var(--font-color); /* 增加底部线条 */
     }
 
     nav ul li {
@@ -392,6 +394,7 @@ footer.other-footer p {
         align-items: center;
         justify-content: center;
         background-color: transparent;
+        width: 100%; /* 确保背景填充 */
     }
 
     nav ul li a:hover,
