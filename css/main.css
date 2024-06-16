@@ -109,7 +109,13 @@ nav ul li a.active {
     height: auto;
     transform: translate(-50%, -50%);
     z-index: -2;
-    opacity: 0.3;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.3; }
 }
 
 /* 白色半透明磨砂效果 */
@@ -124,27 +130,19 @@ nav ul li a.active {
     z-index: -1;
 }
 
-/* 文字和内容 */
-.intro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    color: #333;
-    z-index: 1;
-    position: relative;
+/* 视频交叠渐变效果 */
+@keyframes crossfade {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-.intro-left, .intro-right {
-    flex: 1;
-}
-
-.highlight {
-    color: #f39c12;
-}
-
-.highlight-hover:hover {
-    color: #e74c3c;
+#background-video.crossfade {
+    animation: crossfade 2s forwards;
+    opacity: 0;
 }
 
 /* 主内容样式 */
