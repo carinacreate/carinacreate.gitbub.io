@@ -27,9 +27,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem; /* 调整导航栏高度 */
-    border-bottom: 2px solid #000; /* 增加底部边线 */
-    border-top: 2px solid #000; /* 增加顶部边线 */
+    padding: 0.5rem 1rem; /* 调整导航栏高度，降低1/3 */
+    border-bottom: 1px solid #000; /* 线条更细 */
+    border-top: 1px solid #000; /* 线条更细 */
 }
 
 .header-content {
@@ -63,11 +63,10 @@ nav ul li a {
     font-size: 1rem; /* 调整导航链接字体大小 */
     color: #000;
     text-decoration: none;
-    font-weight: bold; /* 设置粗体 */
     transition: color 0.3s, transform 0.3s;
     display: inline-block;
     padding: 0.5rem 1rem; /* 增加内边距 */
-    border: 2px solid #000; /* 增加边框 */
+    border: 1px solid #000; /* 线条更细 */
 }
 
 nav ul li a:hover,
@@ -80,7 +79,7 @@ nav ul li a.active {
 /* 主内容样式 */
 main {
     padding: 2rem; /* 确保主体内容和导航左边留白一致 */
-    margin-top: 6rem; /* 确保主体内容从最上面开始滑动 */
+    margin-top: 4rem; /* 确保主体内容从最上面开始滑动 */
 }
 
 .intro {
@@ -274,7 +273,7 @@ footer p {
     header {
         flex-direction: row;
         align-items: center;
-        padding: 1rem 1.5rem;
+        padding: 0.5rem 1rem; /* 调整导航栏高度 */
     }
 
     .header-content {
@@ -357,4 +356,4 @@ footer p {
     }
 
     .project-info h2 {
-        font-size:
+        font-size
