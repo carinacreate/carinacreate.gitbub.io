@@ -140,6 +140,31 @@ main {
     transform-origin: left;
 }
 
+/* 关于我页面样式 */
+.about-me {
+    padding: 2rem;
+}
+
+.about-me h2 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.about-me ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-me ul li {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-me ul li strong {
+    color: #4A7C59; /* 使用图片中的绿色 */
+}
+
 /* 项目页面样式 */
 .projects-header {
     text-align: center;
