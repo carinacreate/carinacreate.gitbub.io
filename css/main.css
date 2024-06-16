@@ -140,8 +140,8 @@ nav ul li a.active {
     }
 }
 
-#background-video {
-    animation: fadeIn 2s forwards, crossfade 2s forwards 8s; /* 8s后开始交叠渐变 */
+#background-video.crossfade {
+    animation: crossfade 2s forwards;
 }
 
 /* 主内容样式 */
