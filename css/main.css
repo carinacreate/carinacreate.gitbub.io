@@ -118,7 +118,7 @@ nav ul li a.active {
     to { opacity: 0.3; }
 }
 
-/* 黑色半透明磨砂效果 */
+/* 白色半透明磨砂效果 */
 .video-overlay {
     position: fixed;
     top: 0;
