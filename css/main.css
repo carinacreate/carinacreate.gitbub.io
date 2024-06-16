@@ -28,7 +28,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem; /* 调整导航栏高度 */
-    border-bottom: 1px solid #000;
+    border-bottom: 2px solid #000; /* 增加底部边线 */
+    border-top: 2px solid #000; /* 增加顶部边线 */
 }
 
 .header-content {
@@ -36,7 +37,8 @@ header {
 }
 
 .header-content h1 {
-    font-size: 1.5rem; /* 调整标题字体大小 */
+    font-size: 2rem; /* 调整标题字体大小 */
+    font-weight: bold; /* 设置粗体 */
     margin-bottom: 0.5rem;
 }
 
@@ -64,28 +66,21 @@ nav ul li a {
     font-weight: bold; /* 设置粗体 */
     transition: color 0.3s, transform 0.3s;
     display: inline-block;
-    padding-bottom: 0.2rem; /* 增加底部间距 */
+    padding: 0.5rem 1rem; /* 增加内边距 */
+    border: 2px solid #000; /* 增加边框 */
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #4A7C59; /* 使用图片中的绿色 */
-    animation: bounce 0.5s ease;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-10px);
-    }
+    background-color: #4A7C59; /* 使用图片中的绿色 */
+    color: #fff; /* 选中时文字颜色为白色 */
+    transform: scale(1.1); /* 选中时放大 */
 }
 
 /* 主内容样式 */
 main {
     padding: 2rem; /* 确保主体内容和导航左边留白一致 */
-    margin-top: 4rem; /* 确保主体内容从最上面开始滑动 */
+    margin-top: 6rem; /* 确保主体内容从最上面开始滑动 */
 }
 
 .intro {
@@ -248,14 +243,14 @@ footer {
     background-color: #000; /* 黑色背景 */
     color: #fff;
     text-align: center;
-    padding: 5px 0; /* 调整页脚高度 */
+    padding: 10px 0; /* 调整页脚高度 */
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
 footer p {
-    font-size: 0.5rem; /* 调整版权文字大小 */
+    font-size: 0.75rem; /* 调整版权文字大小 */
 }
 
 /* 动画效果 */
@@ -267,100 +262,5 @@ footer p {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-.project-item.visible {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-/* 自适应设计 */
-@media (max-width: 768px) {
-    header {
-        flex-direction: row;
-        align-items: center;
-        padding: 0.5rem 1rem;
-    }
-
-    .header-content {
-        width: auto;
-        text-align: left;
-        margin-bottom: 0;
-    }
-
-    nav {
-        padding-right: 0;
-        width: auto;
-        justify-content: flex-end;
-    }
-
-    nav ul {
-        flex-direction: row;
-        gap: 0.5rem;
-        margin-right: 0;
-    }
-
-    nav ul li a {
-        font-size: 0.75rem;
-    }
-
-    .intro {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .intro h1 {
-        font-size: 2rem;
-    }
-
-    .intro h2 {
-        font-size: 1.5rem;
-    }
-
-    .intro p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-content h1 {
-        font-size: 1.25rem;
-    }
-
-    nav ul li a {
-        font-size: 0.75rem;
-    }
-
-    .intro h1 {
-        font-size: 1.5rem;
-    }
-
-    .intro h2 {
-        font-size: 1.25rem;
-    }
-
-    .intro p {
-        font-size: 0.875rem;
-    }
-
-    .projects-header h1 {
-        font-size: 1.5rem;
-    }
-
-    .project-info h2 {
-        font-size: 1.2rem;
-    }
-
-    .project-info ul li {
-        font-size: 0.9rem;
-    }
-
-    .project-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .project-item img {
-        max-width: 100%;
     }
 }
