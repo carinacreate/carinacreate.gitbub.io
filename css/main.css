@@ -15,6 +15,7 @@ body {
     background-color: #fff;
     color: #000;
     line-height: 1.6;
+    overflow-x: hidden; /* 防止水平滚动 */
 }
 
 /* 固定导航栏样式 */
@@ -40,6 +41,7 @@ header {
 .header-content h1 {
     font-size: 24px; /* 调整标题字体大小 */
     font-weight: bold; /* 设置粗体 */
+    line-height: 45px; /* 确保标题垂直居中 */
 }
 
 nav {
@@ -53,14 +55,16 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    border-left: 1px solid #000; /* 左边线条 */
     height: 100%; /* 确保导航栏高度一致 */
 }
 
 nav ul li {
     position: relative;
-    border-right: 1px solid #000; /* 右边线条 */
     height: 100%; /* 确保导航栏高度一致 */
+}
+
+nav ul li:not(:last-child) {
+    border-right: 1px solid #000; /* 右边线条 */
 }
 
 nav ul li a {
@@ -82,14 +86,20 @@ nav ul li a.active {
     color: #fff; /* 选中时文字颜色为白色 */
 }
 
+/* 背景视频样式 */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* 确保视频在所有内容的后面 */
+}
+
 /* 主内容样式 */
 main {
     padding: 2rem; /* 确保主体内容和导航左边留白一致 */
     margin-top: 45px; /* 确保主体内容从最上面开始滑动 */
-    background-image: url('path/to/your/image.jpg'); /* 添加背景图片 */
-    background-size: cover; /* 确保背景图片覆盖整个区域 */
-    background-position: center; /* 背景图片居中 */
-    background-repeat: no-repeat; /* 背景图片不重复 */
 }
 
 .intro {
@@ -97,21 +107,19 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 50px 20px;
+    color: #fff; /* 确保文字在视频上可见 */
 }
 
 .intro h1 {
     font-size: 2.5rem; /* 调整 h1 的字体大小 */
-    color: #000;
 }
 
 .intro h2 {
     font-size: 2rem; /* 调整 h2 的字体大小 */
-    color: #000;
 }
 
 .intro p {
     font-size: 1.25rem; /* 调整 p 的字体大小 */
-    color: #000;
 }
 
 .intro .highlight {
@@ -343,10 +351,3 @@ footer p {
     nav ul li a {
         font-size: 0.75rem;
         padding: 0.5rem; /* 调整内边距 */
-    }
-
-    .intro h1 {
-        font-size: 1.5rem;
-    }
-
-    .intro h2 {
