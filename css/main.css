@@ -99,17 +99,12 @@ nav ul li a.active {
     transform: translate(-50%, -50%);
     z-index: -2; /* 确保视频在所有内容的后面 */
     opacity: 0;
-    animation: fadeIn 2s forwards, fadeOut 2s forwards 8s; /* 渐隐渐显效果 */
+    animation: fadeIn 2s forwards; /* 渐隐渐显效果 */
 }
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 0.3; }
-}
-
-@keyframes fadeOut {
-    from { opacity: 0.3; }
-    to { opacity: 0; }
 }
 
 /* 黑色半透明磨砂效果 */
@@ -119,7 +114,7 @@ nav ul li a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* 黑色半透明 */
+    background: rgba(0, 0, 0, 0.2); /* 黑色半透明 */
     backdrop-filter: blur(10px); /* 磨砂效果 */
     z-index: -1; /* 确保在视频上方，内容下方 */
 }
