@@ -137,7 +137,7 @@ main {
     color: #000; /* 确保文字在视频上可见 */
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 添加滑动动画 */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out; /* 添加滑动动画 */
     margin-top: -100px; /* 整体向上挪动一些 */
 }
 
@@ -147,17 +147,17 @@ main {
 }
 
 .intro h1 {
-    font-size: 5rem; /* 调整 h1 的字体大小 */
-    margin-bottom: 1rem; /* 增加与第二句的距离 */
+    font-size: 3rem; /* 调整 h1 的字体大小 */
+    margin-bottom: 0.5rem; /* 增加与第二句的距离 */
 }
 
 .intro h2 {
-    font-size: 3rem; /* 调整 h2 的字体大小 */
-    margin-bottom: 2rem; /* 增加与下一段的距离 */
+    font-size: 2.5rem; /* 调整 h2 的字体大小 */
+    margin-bottom: 1.5rem; /* 增加与下一段的距离 */
 }
 
 .intro p {
-    font-size: 1.5rem; /* 调整 p 的字体大小 */
+    font-size: 1rem; /* 调整 p 的字体大小 */
     margin-bottom: 0.25rem; /* 进一步缩短段落间距 */
 }
 
