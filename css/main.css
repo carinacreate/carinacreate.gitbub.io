@@ -322,6 +322,7 @@ footer p {
         align-items: flex-start; /* 所有内容左对齐 */
         padding: 0.5rem 1rem; /* 调整导航栏高度 */
         height: auto; /* 自动高度 */
+        background-color: transparent; /* 底边背景设置为透明 */
     }
 
     .header-content {
