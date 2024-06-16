@@ -114,7 +114,7 @@ nav ul li a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* 黑色半透明 */
+    background: rgba(255, 255, 255, 0.3); /* 白色半透明 */
     backdrop-filter: blur(10px); /* 磨砂效果 */
     z-index: -1; /* 确保在视频上方，内容下方 */
 }
@@ -134,7 +134,7 @@ main {
     flex-direction: column; /* 垂直排列 */
     align-items: flex-start; /* 所有文字左对齐 */
     padding: 50px 20px;
-    color: #fff; /* 确保文字在视频上可见 */
+    color: #000; /* 确保文字在视频上可见 */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 添加滑动动画 */
@@ -147,17 +147,17 @@ main {
 }
 
 .intro h1 {
-    font-size: 3rem; /* 调整 h1 的字体大小 */
+    font-size: 5rem; /* 调整 h1 的字体大小 */
     margin-bottom: 1rem; /* 增加与第二句的距离 */
 }
 
 .intro h2 {
-    font-size: 2rem; /* 调整 h2 的字体大小 */
+    font-size: 3rem; /* 调整 h2 的字体大小 */
     margin-bottom: 2rem; /* 增加与下一段的距离 */
 }
 
 .intro p {
-    font-size: 1.25rem; /* 调整 p 的字体大小 */
+    font-size: 1.5rem; /* 调整 p 的字体大小 */
     margin-bottom: 0.25rem; /* 进一步缩短段落间距 */
 }
 
@@ -347,6 +347,7 @@ footer.other-footer p {
     }
 
     nav ul li:last-child {
+        height: 45px; /* 确保导航栏高度一致 */
         border-right: none; /* 移除最后一个元素的右边线条 */
     }
 
@@ -374,17 +375,17 @@ footer.other-footer p {
     }
 
     .intro h1 {
-        font-size: 2rem; /* 调整 h1 的字体大小 */
+        font-size: 3rem; /* 调整 h1 的字体大小 */
         margin-bottom: 0.5rem; /* 增加与第二句的距离 */
     }
 
     .intro h2 {
-        font-size: 1.5rem; /* 调整 h2 的字体大小 */
+        font-size: 2rem; /* 调整 h2 的字体大小 */
         margin-bottom: 0.5rem; /* 增加与下一段的距离 */
     }
 
     .intro p {
-        font-size: 1rem; /* 调整 p 的字体大小 */
+        font-size: 1.5rem; /* 调整 p 的字体大小 */
         margin-bottom: 0.5rem; /* 增加段落间距 */
     }
 }
