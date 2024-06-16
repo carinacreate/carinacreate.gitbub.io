@@ -9,11 +9,22 @@ body, h1, h2, h3, p, ul, li, a {
     color: inherit;
 }
 
+/* CSS变量 */
+:root {
+    --primary-color: #4A7C59;
+    --nav-height: 45px;
+    --font-color: #000;
+    --bg-color: #fff;
+    --hover-color: #fff;
+    --highlight-color: #fff;
+    --highlight-bg: #4A7C59;
+}
+
 /* Body styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--bg-color);
+    color: var(--font-color);
     line-height: 1.6;
     overflow-x: hidden; /* 防止水平滚动 */
 }
@@ -23,14 +34,14 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: #fff;
+    background-color: var(--bg-color);
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 45px; /* 调整导航栏高度 */
-    border-bottom: 1px solid #000; /* 线条更细 */
-    border-top: 1px solid #000; /* 线条更细 */
+    height: var(--nav-height);
+    border-bottom: 1px solid var(--font-color);
+    border-top: 1px solid var(--font-color);
 }
 
 .header-content {
@@ -39,42 +50,42 @@ header {
 }
 
 .header-content h1 {
-    font-size: 24px; /* 调整标题字体大小 */
-    font-weight: bold; /* 设置粗体 */
-    line-height: 45px; /* 确保标题垂直居中 */
+    font-size: 24px;
+    font-weight: bold;
+    line-height: var(--nav-height);
 }
 
 nav {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    padding-right: 1rem; /* 确保导航右边的留白 */
+    padding-right: 1rem;
 }
 
 nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    height: 45px; /* 确保导航栏高度一致 */
+    height: var(--nav-height);
 }
 
 nav ul li {
     position: relative;
-    height: 45px; /* 确保导航栏高度一致 */
+    height: var(--nav-height);
 }
 
 nav ul li:not(:last-child) {
-    border-right: 1px solid #000; /* 右边线条 */
+    border-right: 1px solid var(--font-color);
 }
 
 nav ul li a {
-    font-size: 16px; /* 调整导航链接字体大小 */
-    color: #000;
+    font-size: 16px;
+    color: var(--font-color);
     text-decoration: none;
     transition: background-color 0.3s;
     display: inline-block;
-    padding: 0 1rem; /* 调整内边距 */
-    height: 45px; /* 使链接高度与导航栏一致 */
+    padding: 0 1rem;
+    height: var(--nav-height);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,9 +93,9 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: #4A7C59; /* 使用图片中的绿色 */
-    color: #fff; /* 选中时文字颜色为白色 */
-    height: 45px; /* 确保绿色背景高度一致 */
+    background-color: var(--primary-color);
+    color: var(--hover-color);
+    height: var(--nav-height);
 }
 
 /* 背景视频样式 */
@@ -97,9 +108,9 @@ nav ul li a.active {
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    z-index: -2; /* 确保视频在所有内容的后面 */
+    z-index: -2;
     opacity: 0;
-    animation: fadeIn 2s forwards; /* 渐隐渐显效果 */
+    animation: fadeIn 2s forwards;
 }
 
 @keyframes fadeIn {
@@ -114,31 +125,31 @@ nav ul li a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.3); /* 白色半透明 */
-    backdrop-filter: blur(10px); /* 磨砂效果 */
-    z-index: -1; /* 确保在视频上方，内容下方 */
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: -1;
 }
 
 /* 主内容样式 */
 main {
-    padding: 2rem; /* 确保主体内容和导航左边留白一致 */
-    margin-top: 45px; /* 确保主体内容从最上面开始滑动 */
-    height: calc(100vh - 45px); /* 主体页面高度仅剩余45px到界面底边 */
+    padding: 2rem;
+    margin-top: var(--nav-height);
+    height: calc(100vh - var(--nav-height));
     display: flex;
-    align-items: center; /* 垂直居中 */
-    justify-content: center; /* 水平居中 */
+    align-items: center;
+    justify-content: center;
 }
 
 .intro {
     display: flex;
-    flex-direction: column; /* 垂直排列 */
-    align-items: flex-start; /* 所有文字左对齐 */
+    flex-direction: column;
+    align-items: flex-start;
     padding: 50px 20px;
-    color: #fff; /* 确保文字在视频上可见 */
+    color: var(--hover-color);
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 添加滑动动画 */
-    margin-top: -100px; /* 整体向上挪动一些 */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    margin-top: -100px;
 }
 
 .intro.visible {
@@ -148,37 +159,37 @@ main {
 
 /* 标题样式 */
 .intro h1 {
-    font-size: 48px; /* 调整 h1 的字体大小 */
+    font-size: 48px;
     font-weight: bold;
     line-height: 1.2;
-    margin-bottom: 1rem; /* 增加与第二句的距离 */
-    color: #4A7C59; /* 将文字颜色改为绿色 */
+    margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
 .intro h1 .highlight {
-    color: #fff; /* 将 "there" 文字颜色改为白色 */
+    color: var(--highlight-color);
 }
 
 .intro h2 {
-    font-size: 32px; /* 调整 h2 的字体大小 */
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.3;
-    margin-bottom: 2rem; /* 增加与下一段的距离 */
-    color: #4A7C59; /* 将文字颜色改为绿色 */
+    margin-bottom: 2rem;
+    color: var(--primary-color);
 }
 
 /* 正文样式 */
 .intro p {
-    font-size: 18px; /* 调整 p 的字体大小 */
+    font-size: 18px;
     font-weight: normal;
     line-height: 1.6;
-    margin-bottom: 0.25rem; /* 进一步缩短段落间距 */
-    color: #000; /* 将文字颜色改为黑色 */
+    margin-bottom: 0.25rem;
+    color: var(--font-color);
 }
 
 .intro .highlight {
-    background-color: #4A7C59; /* 使用图片中的绿色背景 */
-    color: #000; /* 黑色文字 */
+    background-color: var(--highlight-bg);
+    color: var(--font-color);
     padding: 0.2rem 0.4rem;
     transition: background-color 0.3s;
 }
@@ -195,7 +206,7 @@ main {
     left: 0;
     right: 0;
     height: 0.2rem;
-    background-color: #4A7C59; /* 使用图片中的绿色 */
+    background-color: var(--highlight-bg);
     transition: transform 0.3s;
     transform: scaleX(0);
     transform-origin: right;
@@ -226,13 +237,13 @@ main {
 
 .project-item {
     display: flex;
-    align-items: flex-start; /* 确保文字和图片的上边对齐 */
+    align-items: flex-start;
     gap: 2rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 添加滑动动画 */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .project-item.visible {
@@ -242,7 +253,7 @@ main {
 
 .project-info {
     flex: 1;
-    text-align: left; /* 确保文字在左边 */
+    text-align: left;
 }
 
 .project-info h2 {
@@ -261,7 +272,7 @@ main {
 }
 
 .project-info ul li a {
-    color: #000;
+    color: var(--font-color);
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -269,7 +280,7 @@ main {
 }
 
 .project-info ul li a:hover {
-    color: #4A7C59; /* 使用图片中的绿色 */
+    color: var(--primary-color);
     transform: scale(1.1);
 }
 
@@ -305,64 +316,48 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: transparent; /* 背景透明 */
+    background-color: transparent;
     text-align: center;
-    padding: 10px 0; /* 调整页脚高度 */
-    border-top: 1px solid #000; /* 页脚顶部的线条 */
+    padding: 10px 0;
+    border-top: 1px solid var(--font-color);
 }
 
 /* 主页页脚样式 */
 footer.home-footer p {
-    font-size: 0.75rem; /* 调整版权文字大小 */
-    color: #000; /* 主页版权文字颜色为白色 */
-    margin: 0; /* 确保没有额外的外边距 */
+    font-size: 0.75rem;
+    color: var(--font-color);
+    margin: 0;
 }
 
 /* 其他页面页脚样式 */
 footer.other-footer p {
-    font-size: 0.75rem; /* 调整版权文字大小 */
-    color: #000; /* 其他页面版权文字颜色为黑色 */
-    margin: 0; /* 确保没有额外的外边距 */
-}
-
-/* 动画效果 */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.project-item.visible {
-    animation: fadeInUp 0.6s ease-out;
+    font-size: 0.75rem;
+    color: var(--font-color);
+    margin: 0;
 }
 
 /* 自适应设计 */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* 导航栏分为两行 */
-        align-items: flex-start; /* 所有内容左对齐 */
-        padding: 0; /* 移除内边距 */
-        height: auto; /* 自动高度 */
-        background-color: transparent; /* 底边背景设置为透明 */
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        height: auto;
+        background-color: transparent;
     }
 
     .header-content {
         width: 100%;
         text-align: left;
-        padding: 0.5rem 1rem; /* 调整内边距 */
-        border-bottom: 1px solid #000; /* 增加底部线条 */
-        height: 45px; /* 确保高度一致 */
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid var(--font-color);
+        height: var(--nav-height);
     }
 
     nav {
         width: 100%;
-        padding: 0 1rem; /* 调整内边距 */
-        border-top: 1px solid #000; /* 增加顶部线条 */
+        padding: 0 1rem;
+        border-top: 1px solid var(--font-color);
     }
 
     nav ul {
@@ -372,92 +367,92 @@ footer.other-footer p {
         margin: 0;
         padding: 0;
         width: 100%;
-        justify-content: flex-start; /* 左对齐 */
-        height: 45px; /* 确保高度一致 */
+        justify-content: flex-start;
+        height: var(--nav-height);
     }
 
     nav ul li {
-        flex: 1; /* 平均分配宽度 */
-        height: 100%; /* 确保高度一致 */
-        border-right: 1px solid #000; /* 增加右边线条 */
+        flex: 1;
+        height: 100%;
+        border-right: 1px solid var(--font-color);
     }
 
     nav ul li:last-child {
-        border-right: none; /* 移除最后一个元素的右边线条 */
+        border-right: none;
     }
 
     nav ul li a {
-        font-size: 1rem; /* 调整字体大小 */
-        padding: 0 1rem; /* 调整内边距 */
-        height: 100%; /* 使链接高度与导航栏一致 */
+        font-size: 1rem;
+        padding: 0 1rem;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: transparent; /* 背景透明 */
+        background-color: transparent;
     }
 
     nav ul li a:hover,
     nav ul li a.active {
-        background-color: #4A7C59; /* 使用图片中的绿色 */
-        color: #fff; /* 选中时文字颜色为白色 */
-        height: 100%; /* 确保绿色背景高度一致 */
+        background-color: var(--primary-color);
+        color: var(--hover-color);
+        height: 100%;
     }
 
     .intro {
         flex-direction: column;
-        align-items: flex-start; /* 左对齐 */
+        align-items: flex-start;
         padding: 1rem;
     }
 
     .intro h1 {
-        font-size: 36px; /* 调整 h1 的字体大小 */
-        margin-bottom: 0.5rem; /* 增加与第二句的距离 */
-        color: #4A7C59; /* 将文字颜色改为绿色 */
+        font-size: 36px;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
     }
 
     .intro h1 .highlight {
-        color: #fff; /* 将 "there" 文字颜色改为白色 */
+        color: var(--highlight-color);
     }
 
     .intro h2 {
-        font-size: 28px; /* 调整 h2 的字体大小 */
-        margin-bottom: 0.5rem; /* 增加与下一段的距离 */
-        color: #4A7C59; /* 将文字颜色改为绿色 */
+        font-size: 28px;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color);
     }
 
     .intro p {
-        font-size: 16px; /* 调整 p 的字体大小 */
-        margin-bottom: 0.5rem; /* 增加段落间距 */
-        color: #000; /* 将文字颜色改为黑色 */
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+        color: var(--font-color);
     }
 }
 
 @media (max-width: 480px) {
     .header-content h1 {
-        font-size: 1.25rem; /* 调整标题字体大小 */
+        font-size: 1.25rem;
     }
 
     nav ul li a {
-        font-size: 0.75rem; /* 调整字体大小 */
-        padding: 0.5rem; /* 调整内边距 */
+        font-size: 0.75rem;
+        padding: 0.5rem;
     }
 
     .intro h1 {
-        font-size: 32px; /* 调整 h1 的字体大小 */
-        color: #4A7C59; /* 将文字颜色改为绿色 */
+        font-size: 32px;
+        color: var(--primary-color);
     }
 
     .intro h1 .highlight {
-        color: #fff; /* 将 "there" 文字颜色改为白色 */
+        color: var(--highlight-color);
     }
 
     .intro h2 {
-        font-size: 24px; /* 调整 h2 的字体大小 */
-        color: #4A7C59; /* 将文字颜色改为绿色 */
+        font-size: 24px;
+        color: var(--primary-color);
     }
 
     .intro p {
-        font-size: 14px; /* 调整 p 的字体大小 */
-        color: #000; /* 将文字颜色改为黑色 */
+        font-size: 14px;
+        color: var(--font-color);
     }
 }
