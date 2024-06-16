@@ -213,17 +213,17 @@ main {
 
 /* 固定页脚样式 */
 footer {
-    background-color: #2F4F4F; /* 灰绿色背景 */
+    background-color: rgba(50, 205, 50, 0.5); /* 绿色背景，50%透明度 */
     color: #fff;
     text-align: center;
-    padding: 10px 0; /* 调整页脚高度 */
+    padding: 5px 0; /* 调整页脚高度 */
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
 footer p {
-    font-size: 0.75rem; /* 调整版权文字大小 */
+    font-size: 0.625rem; /* 调整版权文字大小 */
 }
 
 /* 动画效果 */
@@ -245,31 +245,31 @@ footer p {
 /* 自适应设计 */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         padding: 0.5rem 1rem;
     }
 
     .header-content {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1rem;
+        width: auto;
+        text-align: left;
+        margin-bottom: 0;
     }
 
     nav {
         padding-right: 0;
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        justify-content: flex-end;
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        gap: 0.5rem;
         margin-right: 0;
     }
 
     nav ul li a {
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
 
     .intro h1 {
@@ -291,7 +291,7 @@ footer p {
     }
 
     nav ul li a {
-        font-size: 0.875rem;
+        font-size: 0.75rem;
     }
 
     .intro h1 {
