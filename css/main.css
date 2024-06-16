@@ -347,6 +347,7 @@ html, body {
     opacity: 0; /* 初始隐藏 */
     position: absolute; /* 确保图片位置固定 */
     right: 0; /* 确保图片右对齐 */
+    top: 0; /* 确保图片上对齐 */
 }
 
 .project-image.active {
