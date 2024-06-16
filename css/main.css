@@ -328,6 +328,7 @@ main {
     height: auto;
     border-radius: 4px; /* 调整圆角大小 */
     transition: transform 0.3s ease;
+    display: none; /* 默认隐藏所有图片 */
 }
 
 .project-image:hover {
