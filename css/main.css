@@ -132,6 +132,14 @@ main {
     align-items: flex-start; /* 所有文字左对齐 */
     padding: 50px 20px;
     color: #fff; /* 确保文字在视频上可见 */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 添加滑动动画 */
+}
+
+.intro.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .intro h1 {
