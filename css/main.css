@@ -91,6 +91,18 @@ main {
     padding: 50px 20px;
 }
 
+.intro h1 {
+    font-size: 2.5rem; /* 调整 h1 的字体大小 */
+}
+
+.intro h2 {
+    font-size: 2rem; /* 调整 h2 的字体大小 */
+}
+
+.intro p {
+    font-size: 1.25rem; /* 调整 p 的字体大小 */
+}
+
 .intro .highlight {
     color: #ff6347;
 }
@@ -179,13 +191,13 @@ main {
 
 /* 固定页脚样式 */
 footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
-    background-color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    border-top: 1px solid #ddd;
 }
 
 /* 动画效果 */
