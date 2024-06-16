@@ -109,13 +109,7 @@ nav ul li a.active {
     height: auto;
     transform: translate(-50%, -50%);
     z-index: -2;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 0.3; }
+    opacity: 0.3;
 }
 
 /* 白色半透明磨砂效果 */
@@ -128,21 +122,6 @@ nav ul li a.active {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     z-index: -1;
-}
-
-/* 视频交叠渐变效果 */
-@keyframes crossfade {
-    0% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-#background-video.crossfade {
-    animation: crossfade 2s forwards;
-    opacity: 0;
 }
 
 /* 主内容样式 */
