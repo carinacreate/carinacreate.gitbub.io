@@ -277,18 +277,17 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem; /* 调整间距 */
     text-align: left; /* 确保文字靠左 */
 }
 
 .project-category {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem; /* 调整内边距 */
 }
 
 .project-category h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.25rem; /* 调整字体大小 */
+    margin-bottom: 0.5rem; /* 调整间距 */
 }
 
 .project-category ul {
@@ -297,7 +296,7 @@ main {
 }
 
 .project-category ul li {
-    font-size: 1rem;
+    font-size: 0.875rem; /* 调整字体大小 */
     margin-bottom: 0.5rem;
 }
 
@@ -319,16 +318,22 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem; /* 调整间距 */
     align-items: flex-end; /* 确保图片靠右 */
 }
 
 .project-image {
-    max-width: 100%;
+    max-width: 80%; /* 调整图片大小 */
     height: auto;
     border-radius: 4px; /* 调整圆角大小 */
-    transition: transform 0.3s ease;
-    display: none; /* 默认隐藏所有图片 */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* 添加过渡效果 */
+    opacity: 0; /* 初始隐藏 */
+    position: absolute; /* 确保图片位置固定 */
+}
+
+.project-image.active {
+    opacity: 1; /* 显示图片 */
+    position: relative; /* 确保图片位置固定 */
 }
 
 .project-image:hover {
@@ -358,7 +363,7 @@ main {
     }
 
     .projects-list {
-        gap: 1rem;
+        gap: 0.5rem; /* 调整间距 */
     }
 
     .project-category {
@@ -366,7 +371,7 @@ main {
     }
 
     .projects-images {
-        gap: 1rem;
+        gap: 0.5rem; /* 调整间距 */
         align-items: center; /* 确保图片在小屏幕上居中 */
     }
 
@@ -382,11 +387,11 @@ main {
     }
 
     .project-category h2 {
-        font-size: 1.25rem;
+        font-size: 1rem; /* 调整字体大小 */
     }
 
     .project-category ul li {
-        font-size: 0.875rem;
+        font-size: 0.75rem; /* 调整字体大小 */
     }
 }
 
