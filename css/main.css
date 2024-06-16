@@ -278,6 +278,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    text-align: left; /* 确保文字靠左 */
 }
 
 .project-category {
@@ -288,7 +289,6 @@ main {
 .project-category h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    text-align: left; /* 左对齐 */
 }
 
 .project-category ul {
@@ -299,7 +299,6 @@ main {
 .project-category ul li {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    text-align: left; /* 左对齐 */
 }
 
 .project-category ul li a {
@@ -321,6 +320,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: flex-end; /* 确保图片靠右 */
 }
 
 .project-image {
@@ -362,11 +362,12 @@ main {
     }
 
     .project-category {
-        text-align: center;
+        text-align: left; /* 确保文字在小屏幕上仍然靠左 */
     }
 
     .projects-images {
         gap: 1rem;
+        align-items: center; /* 确保图片在小屏幕上居中 */
     }
 
     .project-image {
