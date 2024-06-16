@@ -23,21 +23,22 @@
     </header>
     <main>
         <div class="video-overlay"></div>
-        <div class="video-background">
-            <iframe src="https://www.instagram.com/reel/CtuHDXTMg4G/" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </div>
+        <video autoplay muted loop id="background-video">
+            <source src="videos/index-videos/index-video1.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <section class="intro">
-            <div class="intro-left">
-                <h1>Hi, <span class="highlight">there</span></h1>
-                <h2>I <span class="highlight-hover">design</span>, <span class="highlight-hover">create</span>, and <span class="highlight-hover">innovate</span>.</h2>
-            </div>
-            <div class="intro-right">
-                <p>I have worked as a fashion designer, special effects designer, and video product manager. I am also a lifelong learner. I love photography, video production, 3D modeling, and AIGC creation. Anything related to visual arts can spark my curiosity.</p>
-            </div>
+            <h1>Hi, <span class="highlight">there</span></h1>
+            <h2>I <span class="highlight-hover">design</span>, <span class="highlight-hover">create</span>, and <span class="highlight-hover">innovate</span>.</h2>
+            <p>我曾担任过时尚设计师、特效设计师和影像产品经理，同时也是一名终生学习者。我热爱摄影、视频制作、3D建模和AIGC创作，任何与视觉相关的事物都能激发我的好奇心。</p>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 ZHANGWENQING. All rights reserved.</p>
     </footer>
+    <script>
+        // 设置视频播放速度为慢动作
+        document.getElementById('background-video').playbackRate = 0.5;
+    </script>
 </body>
 </html>
