@@ -237,19 +237,15 @@ main {
     transform: scale(1.05);
 }
 
-/* 固定页脚样式 */
+/* 页脚样式 */
 footer {
-    background-color: #000; /* 黑色背景 */
-    color: #fff;
     text-align: center;
     padding: 10px 0; /* 调整页脚高度 */
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
 
 footer p {
     font-size: 0.75rem; /* 调整版权文字大小 */
+    color: #000; /* 版权文字颜色为黑色 */
 }
 
 /* 动画效果 */
@@ -356,4 +352,12 @@ footer p {
     }
 
     .project-info h2 {
-        font-size
+        font-size: 1.2rem;
+    }
+
+    .project-info ul li {
+        font-size: 0.9rem;
+    }
+
+    .project-item {
+        flex-direction
