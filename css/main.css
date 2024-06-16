@@ -28,7 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px; /* 调整导航栏高度 */
+    height: 45px; /* 调整导航栏高度 */
     border-bottom: 1px solid #000; /* 线条更细 */
     border-top: 1px solid #000; /* 线条更细 */
 }
@@ -41,7 +41,7 @@ header {
 .header-content h1 {
     font-size: 24px; /* 调整标题字体大小 */
     font-weight: bold; /* 设置粗体 */
-    line-height: 60px; /* 确保标题垂直居中 */
+    line-height: 45px; /* 确保标题垂直居中 */
 }
 
 nav {
@@ -55,12 +55,12 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    height: 100%; /* 确保导航栏高度一致 */
+    height: 45px; /* 确保导航栏高度一致 */
 }
 
 nav ul li {
     position: relative;
-    height: 100%; /* 确保导航栏高度一致 */
+    height: 45px; /* 确保导航栏高度一致 */
 }
 
 nav ul li:not(:last-child) {
@@ -74,7 +74,7 @@ nav ul li a {
     transition: background-color 0.3s;
     display: inline-block;
     padding: 0 1rem; /* 调整内边距 */
-    height: 100%; /* 使链接高度与导航栏一致 */
+    height: 45px; /* 使链接高度与导航栏一致 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,6 +84,7 @@ nav ul li a:hover,
 nav ul li a.active {
     background-color: #4A7C59; /* 使用图片中的绿色 */
     color: #fff; /* 选中时文字颜色为白色 */
+    height: 45px; /* 确保绿色背景高度一致 */
 }
 
 /* 背景视频样式 */
@@ -103,14 +104,14 @@ nav ul li a.active {
     to { opacity: 0.3; }
 }
 
-/* 半透明磨砂效果 */
+/* 黑色半透明磨砂效果 */
 .video-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* 半透明黑色 */
+    background: rgba(0, 0, 0, 0.3); /* 黑色半透明 */
     backdrop-filter: blur(10px); /* 磨砂效果 */
     z-index: -1; /* 确保在视频上方，内容下方 */
 }
@@ -118,37 +119,34 @@ nav ul li a.active {
 /* 主内容样式 */
 main {
     padding: 2rem; /* 确保主体内容和导航左边留白一致 */
-    margin-top: 60px; /* 确保主体内容从最上面开始滑动 */
+    margin-top: 45px; /* 确保主体内容从最上面开始滑动 */
+    height: calc(100vh - 45px); /* 主体页面高度仅剩余45px到界面底边 */
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
 }
 
 .intro {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* 垂直排列 */
+    align-items: flex-start; /* 所有文字左对齐 */
     padding: 50px 20px;
     color: #fff; /* 确保文字在视频上可见 */
 }
 
-.intro-left {
-    flex: 1;
-    text-align: left;
-}
-
-.intro-right {
-    flex: 1;
-    text-align: right;
-}
-
 .intro h1 {
-    font-size: 2.5rem; /* 调整 h1 的字体大小 */
+    font-size: 3rem; /* 调整 h1 的字体大小 */
+    margin-bottom: 1rem; /* 增加与第二句的距离 */
 }
 
 .intro h2 {
     font-size: 2rem; /* 调整 h2 的字体大小 */
+    margin-bottom: 1rem; /* 增加与下一段的距离 */
 }
 
 .intro p {
     font-size: 1.25rem; /* 调整 p 的字体大小 */
+    margin-bottom: 1rem; /* 增加段落间距 */
 }
 
 .intro .highlight {
@@ -320,37 +318,82 @@ footer p {
 /* 自适应设计 */
 @media (max-width: 768px) {
     header {
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column; /* 导航栏分为两行 */
+        align-items: flex-start; /* 所有内容左对齐 */
         padding: 0.5rem 1rem; /* 调整导航栏高度 */
+        height: auto; /* 自动高度 */
     }
 
     .header-content {
-        width: auto;
+        width: 100%;
         text-align: left;
-        margin-bottom: 0;
+        margin-bottom: 0.5rem; /* 增加行间距 */
     }
 
     nav {
+        width: 100%;
         padding-right: 0;
-        width: auto;
-        justify-content: flex-end;
     }
 
     nav ul {
         flex-direction: row;
         gap: 0.5rem;
         margin-right: 0;
+        width: 100%;
+        justify-content: flex-start; /* 左对齐 */
+    }
+
+    nav ul li {
+        flex: 1; /* 平均分配宽度 */
     }
 
     nav ul li a {
-        font-size: 0.75rem;
+        font-size: 1rem; /* 调整字体大小 */
         padding: 0.5rem; /* 调整内边距 */
+        text-align: left; /* 左对齐 */
     }
 
     .intro {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start; /* 左对齐 */
+        padding: 1rem;
     }
 
-    .intro h1
+    .intro h1 {
+        font-size: 2rem; /* 调整 h1 的字体大小 */
+        margin-bottom: 0.5rem; /* 增加与第二句的距离 */
+    }
+
+    .intro h2 {
+        font-size: 1.5rem; /* 调整 h2 的字体大小 */
+        margin-bottom: 0.5rem; /* 增加与下一段的距离 */
+    }
+
+    .intro p {
+        font-size: 1rem; /* 调整 p 的字体大小 */
+        margin-bottom: 0.5rem; /* 增加段落间距 */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.25rem; /* 调整标题字体大小 */
+    }
+
+    nav ul li a {
+        font-size: 0.75rem; /* 调整字体大小 */
+        padding: 0.5rem; /* 调整内边距 */
+    }
+
+    .intro h1 {
+        font-size: 1.5rem; /* 调整 h1 的字体大小 */
+    }
+
+    .intro h2 {
+        font-size: 1.25rem; /* 调整 h2 的字体大小 */
+    }
+
+    .intro p {
+        font-size: 0.875rem; /* 调整 p 的字体大小 */
+    }
+}
