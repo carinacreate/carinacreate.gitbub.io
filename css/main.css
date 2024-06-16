@@ -27,7 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem; /* 调整导航栏高度 */
+    padding: 1rem 1.5rem; /* 调整导航栏高度 */
     border-bottom: 2px solid #000; /* 增加底部边线 */
     border-top: 2px solid #000; /* 增加顶部边线 */
 }
@@ -37,7 +37,7 @@ header {
 }
 
 .header-content h1 {
-    font-size: 2rem; /* 调整标题字体大小 */
+    font-size: 1.75rem; /* 调整标题字体大小 */
     font-weight: bold; /* 设置粗体 */
     margin-bottom: 0.5rem;
 }
@@ -46,7 +46,7 @@ nav {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    padding-right: 1rem; /* 确保导航右边的留白 */
+    padding-right: 1.5rem; /* 确保导航右边的留白 */
 }
 
 nav ul {
@@ -60,7 +60,7 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 1.25rem; /* 调整导航链接字体大小 */
+    font-size: 1rem; /* 调整导航链接字体大小 */
     color: #000;
     text-decoration: none;
     font-weight: bold; /* 设置粗体 */
@@ -264,3 +264,97 @@ footer p {
         transform: translateY(0);
     }
 }
+
+.project-item.visible {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* 自适应设计 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .header-content {
+        width: auto;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    nav {
+        padding-right: 0;
+        width: auto;
+        justify-content: flex-end;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 0.5rem;
+        margin-right: 0;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 0.5rem; /* 调整内边距 */
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .about-me {
+        padding: 1rem;
+    }
+
+    .about-me h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-me ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.25rem;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 0.5rem; /* 调整内边距 */
+    }
+
+    .intro h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro h2 {
+        font-size: 1.25rem;
+    }
+
+    .intro p {
+        font-size: 0.875rem;
+    }
+
+    .projects-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-info h2 {
+        font-size:
