@@ -124,6 +124,29 @@ nav ul li a.active {
     z-index: -1;
 }
 
+/* 文字和内容 */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+    z-index: 1;
+    position: relative;
+}
+
+.intro-left, .intro-right {
+    flex: 1;
+}
+
+.highlight {
+    color: #f39c12;
+}
+
+.highlight-hover:hover {
+    color: #e74c3c;
+}
+
 /* 主内容样式 */
 main {
     padding: 2rem;
