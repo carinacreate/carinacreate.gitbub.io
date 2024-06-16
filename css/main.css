@@ -280,43 +280,27 @@ main {
     gap: 2rem;
 }
 
-.project-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
+.project-category {
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.project-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.project-info {
-    flex: 1;
-    text-align: left;
-}
-
-.project-info h2 {
+.project-category h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.project-info ul {
+.project-category ul {
     list-style: none;
     padding: 0;
 }
 
-.project-info ul li {
+.project-category ul li {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.project-info ul li a {
+.project-category ul li a {
     color: var(--font-color);
     text-decoration: none;
     display: inline-block;
@@ -324,7 +308,7 @@ main {
     transition: color 0.3s, transform 0.3s;
 }
 
-.project-info ul li a:hover {
+.project-category ul li a:hover {
     color: var(--primary-color);
     transform: scale(1.1);
 }
@@ -347,22 +331,6 @@ main {
     transform: scale(1.05);
 }
 
-/* 动画效果 */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.project-item.visible {
-    animation: fadeInUp 0.6s ease-out;
-}
-
 /* 自适应设计 */
 @media (max-width: 768px) {
     .projects-content {
@@ -373,13 +341,7 @@ main {
         gap: 1rem;
     }
 
-    .project-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .project-info {
+    .project-category {
         text-align: center;
     }
 
@@ -398,11 +360,11 @@ main {
         font-size: 1.5rem;
     }
 
-    .project-info h2 {
+    .project-category h2 {
         font-size: 1.25rem;
     }
 
-    .project-info ul li {
+    .project-category ul li {
         font-size: 0.875rem;
     }
 }
