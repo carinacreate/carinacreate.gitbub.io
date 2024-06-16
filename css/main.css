@@ -93,7 +93,26 @@ nav ul li a.active {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: -1; /* 确保视频在所有内容的后面 */
+    z-index: -2; /* 确保视频在所有内容的后面 */
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* 渐隐渐显效果 */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 半透明磨砂效果 */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* 半透明白色 */
+    backdrop-filter: blur(10px); /* 磨砂效果 */
+    z-index: -1; /* 确保在视频上方，内容下方 */
 }
 
 /* 主内容样式 */
