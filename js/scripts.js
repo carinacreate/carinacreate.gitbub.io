@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const projectCategories = document.querySelectorAll('.project-category');
+    const projectLinks = document.querySelectorAll('.project-category ul li a');
     const projectImages = document.querySelectorAll('.project-image');
 
-    projectCategories.forEach(category => {
-        category.addEventListener('mouseenter', function() {
-            const id = this.id;
+    projectLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            const imageId = this.getAttribute('data-image');
             projectImages.forEach(img => {
-                if (img.id === `image-${id}`) {
+                if (img.id === imageId) {
                     img.style.display = 'block';
                 } else {
                     img.style.display = 'none';
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 默认显示第一个项目的图片
     projectImages.forEach(img => {
-        if (img.id === 'image-art-works') {
+        if (img.id === 'image1') {
             img.style.display = 'block';
         } else {
             img.style.display = 'none';
