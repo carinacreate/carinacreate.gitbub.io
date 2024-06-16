@@ -312,8 +312,8 @@ main {
 
 .project-category ul li a:hover,
 .project-category ul li a.active {
-    color: var(--primary-color);
-    transform: scale(1.1);
+    color: var(--primary-color); /* 文字变绿 */
+    transform: scale(1.1); /* 文字放大效果 */
 }
 
 .projects-images {
