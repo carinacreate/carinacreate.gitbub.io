@@ -109,13 +109,7 @@ nav ul li a.active {
     height: auto;
     transform: translate(-50%, -50%);
     z-index: -2;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 0.3; }
+    opacity: 0.3;
 }
 
 /* 白色半透明磨砂效果 */
@@ -128,6 +122,29 @@ nav ul li a.active {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     z-index: -1;
+}
+
+/* 文字和内容 */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+    z-index: 1;
+    position: relative;
+}
+
+.intro-left, .intro-right {
+    flex: 1;
+}
+
+.highlight {
+    color: #f39c12;
+}
+
+.highlight-hover:hover {
+    color: #e74c3c;
 }
 
 /* 主内容样式 */
