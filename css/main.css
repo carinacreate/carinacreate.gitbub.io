@@ -351,7 +351,7 @@ footer.other-footer p {
         text-align: left;
         padding: 0.5rem 1rem;
         border-bottom: 1px solid var(--font-color);
-        height: var(--nav-height);
+        height: 45px; /* 确保高度一致 */
     }
 
     nav {
@@ -367,14 +367,17 @@ footer.other-footer p {
         margin: 0;
         padding: 0;
         width: 100%;
-        justify-content: flex-start;
-        height: var(--nav-height);
+        justify-content: space-between; /* 左右留白一样多 */
+        height: 45px; /* 确保高度一致 */
     }
 
     nav ul li {
         flex: 1;
         height: 100%;
         border-right: 1px solid var(--font-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     nav ul li:last-child {
@@ -424,6 +427,43 @@ footer.other-footer p {
         font-size: 16px;
         margin-bottom: 0.5rem;
         color: var(--font-color);
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.25rem;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+        color: var(--primary-color);
+    }
+
+    .intro h1 .highlight {
+        color: var(--highlight-color);
+    }
+
+    .intro h2 {
+        font-size: 24px;
+        color: var(--primary-color);
+    }
+
+    .intro p {
+        font-size: 14px;
+        color: var(--font-color);
+    }
+}
+
+    /* 自适应页脚 */
+    footer {
+        position: static; /* 取消固定 */
+        border-top: none; /* 取消横线 */
     }
 }
 
