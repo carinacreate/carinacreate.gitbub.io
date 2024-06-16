@@ -64,7 +64,7 @@
         // 确保视频循环播放并且在消失时不会出现灰色背景
         const video = document.getElementById('background-video');
         video.addEventListener('timeupdate', function() {
-            if (video.currentTime >= video.duration - 2) {
+            if (video.currentTime >= video.duration - 1) {
                 video.classList.add('crossfade');
             }
         });
@@ -73,6 +73,10 @@
             video.classList.remove('crossfade');
             video.currentTime = 0;
             video.play();
+        });
+
+        video.addEventListener('play', function() {
+            video.classList.remove('crossfade');
         });
     </script>
 </body>
