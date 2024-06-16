@@ -1,4 +1,4 @@
-/*通用*/
+/* 通用 */
 
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li, a {
@@ -99,6 +99,7 @@ main {
     color: #ff6347;
 }
 
+/* 项目页面样式 */
 .projects-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -185,4 +186,20 @@ footer {
     text-align: center;
     padding: 1rem 0;
     border-top: 1px solid #ddd;
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-item.visible {
+    animation: fadeInUp 0.6s ease-out;
 }
