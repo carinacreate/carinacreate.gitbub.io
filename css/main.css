@@ -86,6 +86,19 @@ main {
     margin-top: 6rem; /* 确保主体内容从最上面开始滑动 */
 }
 
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro .highlight {
+    color: #ff6347;
+}
+
+.intro .highlight-hover:hover {
+    color: #ff6347;
+}
+
 .projects-header {
     text-align: center;
     margin-bottom: 2rem;
