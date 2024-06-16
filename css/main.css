@@ -130,21 +130,6 @@ nav ul li a.active {
     z-index: -1;
 }
 
-/* 视频交叠渐变效果 */
-@keyframes crossfade {
-    0% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-#background-video.crossfade {
-    animation: crossfade 2s forwards;
-    opacity: 0;
-}
-
 /* 主内容样式 */
 main {
     padding: 2rem;
