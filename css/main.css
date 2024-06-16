@@ -51,29 +51,34 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 1rem;
-    margin-right: 1rem; /* 向左移动导航栏的三个文字 */
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #000; /* 左边线条 */
 }
 
 nav ul li {
     position: relative;
+    border-right: 1px solid #000; /* 右边线条 */
 }
 
 nav ul li a {
     font-size: 16px; /* 调整导航链接字体大小 */
     color: #000;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
+    transition: background-color 0.3s;
     display: inline-block;
     padding: 0.5rem 1rem; /* 增加内边距 */
-    border: 1px solid #000; /* 线条更细 */
+    height: 100%; /* 使链接高度与导航栏一致 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* 确保每个链接形成正方形 */
 }
 
 nav ul li a:hover,
 nav ul li a.active {
     background-color: #4A7C59; /* 使用图片中的绿色 */
     color: #fff; /* 选中时文字颜色为白色 */
-    transform: scale(1.1); /* 选中时放大 */
 }
 
 /* 主内容样式 */
@@ -340,16 +345,4 @@ footer p {
     }
 
     .intro h1 {
-        font-size: 1.5rem;
-    }
-
-    .intro h2 {
-        font-size: 1.25rem;
-    }
-
-    .intro p {
-        font-size: 0.875rem;
-    }
-
-    .projects-header h1 {
-        font
+        font-size: 1.5
