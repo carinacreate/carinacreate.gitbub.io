@@ -326,7 +326,7 @@ main {
 .project-image {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 4px; /* 调整圆角大小 */
     transition: transform 0.3s ease;
 }
 
