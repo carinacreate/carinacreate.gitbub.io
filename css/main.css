@@ -287,15 +287,23 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #fff; /* 背景颜色 */
+    background-color: transparent; /* 背景透明 */
     text-align: center;
     padding: 10px 0; /* 调整页脚高度 */
     border-top: 1px solid #000; /* 页脚顶部的线条 */
 }
 
-footer p {
+/* 主页页脚样式 */
+footer.home-footer p {
     font-size: 0.75rem; /* 调整版权文字大小 */
-    color: #000; /* 版权文字颜色为黑色 */
+    color: #fff; /* 主页版权文字颜色为白色 */
+    margin: 0; /* 确保没有额外的外边距 */
+}
+
+/* 其他页面页脚样式 */
+footer.other-footer p {
+    font-size: 0.75rem; /* 调整版权文字大小 */
+    color: #000; /* 其他页面版权文字颜色为黑色 */
     margin: 0; /* 确保没有额外的外边距 */
 }
 
