@@ -6,12 +6,114 @@
     <title>Projects</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a.active {
+            color: #ff4081;
+        }
+        .projects-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .project-category {
+            margin: 1rem;
+            text-align: center;
+        }
+        .project-category h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .project-category ul {
+            list-style: none;
+            padding: 0;
+        }
+        .project-category ul li {
+            margin-bottom: 0.5rem;
+        }
+        .project-category ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .project-category ul li a:hover {
+            color: #ff4081;
+        }
+        .projects-images {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        .project-image {
+            display: none;
+            width: 100%;
+            border-radius: 8px;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .project-image.active {
+            display: block;
+            opacity: 1;
+        }
+        .prev-button, .next-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .prev-button:hover, .next-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .prev-button {
+            left: 0;
+        }
+        .next-button {
+            right: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <h1>ZHANGWENQING</h1>
-        </div>
+        <h1>ZHANGWENQING</h1>
         <nav>
             <ul>
                 <li><a href="../index.html">HOME</a></li>
@@ -23,54 +125,86 @@
     </header>
     <main>
         <section class="projects-content">
-            <div class="projects-list">
-                <div class="project-category">
-                    <h2>ART WORKS</h2>
-                    <ul>
-                        <li><a href="midjourney.html" data-image="image1"><span>#01 Midjourney Projects</span></a></li>
-                        <li><a href="3d.html" data-image="image2"><span>#02 3D Projects</span></a></li>
-                        <li><a href="photographic.html" data-image="image3"><span>#03 Photographic Works</span></a></li>
-                        <li><a href="shortfilm.html" data-image="image4"><span>#04 Short Film Works</span></a></li>
-                    </ul>
-                </div>
-                <div class="project-category">
-                    <h2>2017 - 2024</h2>
-                    <h2>WORK EXAMPLES</h2>
-                    <ul>
-                        <li><a href="truesight.html" data-image="image5"><span>#05 TRUESIGHT Work Examples</span></a></li>
-                        <li><a href="xiaomi.html" data-image="image6"><span>#06 XIAOMI Work Examples</span></a></li>
-                        <li><a href="bytedance.html" data-image="image7"><span>#07 BYTEDANCE Work Examples</span></a></li>
-                        <li><a href="metu.html" data-image="image8"><span>#08 METU Work Examples</span></a></li>
-                    </ul>
-                </div>
-                <div class="project-category">
-                    <h2>2015 - 2016</h2>
-                    <h2>FASHION JOURNEY</h2>
-                    <ul>
-                        <li><a href="graduation.html" data-image="image9"><span>#09 Graduation Project</span></a></li>
-                        <li><a href="cjyao.html" data-image="image10"><span>#10 C.J.YAO Work Examples</span></a></li>
-                    </ul>
-                </div>
+            <div class="project-category">
+                <h2>ART WORKS</h2>
+                <ul>
+                    <li><a href="midjourney.html" data-image="image1"><span>#01 Midjourney Projects</span></a></li>
+                    <li><a href="3d.html" data-image="image2"><span>#02 3D Projects</span></a></li>
+                    <li><a href="photographic.html" data-image="image3"><span>#03 Photographic Works</span></a></li>
+                    <li><a href="shortfilm.html" data-image="image4"><span>#04 Short Film Works</span></a></li>
+                </ul>
             </div>
-            <div class="projects-images">
-                <button class="prev-button">&lt;</button>
-                <button class="next-button">&gt;</button>
-                <a href="midjourney.html"><img src="../images/projects-images/projects-image1.png" alt="Project 1" class="project-image active" id="image1"></a>
-                <a href="3d.html"><img src="../images/projects-images/projects-image2.png" alt="Project 2" class="project-image" id="image2"></a>
-                <a href="photographic.html"><img src="../images/projects-images/projects-image3.png" alt="Project 3" class="project-image" id="image3"></a>
-                <a href="shortfilm.html"><img src="../images/projects-images/projects-image4.png" alt="Project 4" class="project-image" id="image4"></a>
-                <a href="truesight.html"><img src="../images/projects-images/projects-image5.png" alt="Project 5" class="project-image" id="image5"></a>
-                <a href="xiaomi.html"><img src="../images/projects-images/projects-image6.png" alt="Project 6" class="project-image" id="image6"></a>
-                <a href="bytedance.html"><img src="../images/projects-images/projects-image7.png" alt="Project 7" class="project-image" id="image7"></a>
-                <a href="metu.html"><img src="../images/projects-images/projects-image8.png" alt="Project 8" class="project-image" id="image8"></a>
-                <a href="graduation.html"><img src="../images/projects-images/projects-image9.png" alt="Project 9" class="project-image" id="image9"></a>
-                <a href="cjyao.html"><img src="../images/projects-images/projects-image10.png" alt="Project 10" class="project-image" id="image10"></a>
+            <div class="project-category">
+                <h2>2017 - 2024</h2>
+                <h2>WORK EXAMPLES</h2>
+                <ul>
+                    <li><a href="truesight.html" data-image="image5"><span>#05 TRUESIGHT Work Examples</span></a></li>
+                    <li><a href="xiaomi.html" data-image="image6"><span>#06 XIAOMI Work Examples</span></a></li>
+                    <li><a href="bytedance.html" data-image="image7"><span>#07 BYTEDANCE Work Examples</span></a></li>
+                    <li><a href="metu.html" data-image="image8"><span>#08 METU Work Examples</span></a></li>
+                </ul>
+            </div>
+            <div class="project-category">
+                <h2>2015 - 2016</h2>
+                <h2>FASHION JOURNEY</h2>
+                <ul>
+                    <li><a href="graduation.html" data-image="image9"><span>#09 Graduation Project</span></a></li>
+                    <li><a href="cjyao.html" data-image="image10"><span>#10 C.J.YAO Work Examples</span></a></li>
+                </ul>
             </div>
         </section>
+        <div class="projects-images">
+            <button class="prev-button">&lt;</button>
+            <button class="next-button">&gt;</button>
+            <a href="midjourney.html"><img src="../images/projects-images/projects-image1.png" alt="Project 1" class="project-image active" id="image1"></a>
+            <a href="3d.html"><img src="../images/projects-images/projects-image2.png" alt="Project 2" class="project-image" id="image2"></a>
+            <a href="photographic.html"><img src="../images/projects-images/projects-image3.png" alt="Project 3" class="project-image" id="image3"></a>
+            <a href="shortfilm.html"><img src="../images/projects-images/projects-image4.png" alt="Project 4" class="project-image" id="image4"></a>
+            <a href="truesight.html"><img src="../images/projects-images/projects-image5.png" alt="Project 5" class="project-image" id="image5"></a>
+            <a href="xiaomi.html"><img src="../images/projects-images/projects-image6.png" alt="Project 6" class="project-image" id="image6"></a>
+            <a href="bytedance.html"><img src="../images/projects-images/projects-image7.png" alt="Project 7" class="project-image" id="image7"></a>
+            <a href="metu.html"><img src="../images/projects-images/projects-image8.png" alt="Project 8" class="project-image" id="image8"></a>
+            <a href="graduation.html"><img src="../images/projects-images/projects-image9.png" alt="Project 9" class="project-image" id="image9"></a>
+            <a href="cjyao.html"><img src="../images/projects-images/projects-image10.png" alt="Project 10" class="project-image" id="image10"></a>
+        </div>
     </main>
-    <footer class="other-footer">
+    <footer>
         <p>&copy; 2024 ZHANGWENQING.</p>
     </footer>
-    <script src="../js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectLinks = document.querySelectorAll('.project-category ul li a');
+            const projectImages = document.querySelectorAll('.project-image');
+            const prevButton = document.querySelector('.prev-button');
+            const nextButton = document.querySelector('.next-button');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                projectImages.forEach((img, i) => {
+                    img.classList.toggle('active', i === index);
+                });
+            }
+
+            projectLinks.forEach((link, index) => {
+                link.addEventListener('mouseenter', function() {
+                    currentIndex = index;
+                    showImage(currentIndex);
+                });
+            });
+
+            prevButton.addEventListener('click', function() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : projectImages.length - 1;
+                showImage(currentIndex);
+            });
+
+            nextButton.addEventListener('click', function() {
+                currentIndex = (currentIndex < projectImages.length - 1) ? currentIndex + 1 : 0;
+                showImage(currentIndex);
+            });
+
+            // 默认显示第一个项目的图片
+            showImage(currentIndex);
+        });
+    </script>
 </body>
 </html>
