@@ -257,50 +257,60 @@ main {
     transform-origin: left;
 }
 
-/* 项目页面样式 */
-html, body {
-    height: 100%;
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    overflow: hidden; /* 禁止页面滚动 */
-    display: flex;
-    flex-direction: column;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.projects-header {
+/* 头部样式 */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
-.projects-header h1 {
-    font-size: 2rem;
-    color: #333;
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    color: #ff4081;
+}
+
+/* 项目内容样式 */
 .projects-content {
     display: flex;
-    gap: 2rem;
-    flex: 1; /* 使内容区域占满剩余空间 */
-    overflow: hidden; /* 禁止内容区域滚动 */
-    align-items: flex-start; /* 确保内容上方对齐 */
-}
-
-.projects-list {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* 调整间距 */
-    text-align: left; /* 确保文字靠左 */
-    overflow-y: auto; /* 允许项目列表内部滚动 */
-    padding-right: 1rem; /* 添加内边距以避免滚动条覆盖内容 */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
 }
 
 .project-category {
-    padding-bottom: 1rem; /* 调整内边距 */
+    margin: 1rem;
+    text-align: center;
 }
 
 .project-category h2 {
-    font-size: 1.25rem; /* 调整字体大小 */
-    margin-bottom: 0.5rem; /* 调整间距 */
+    margin-bottom: 1rem;
+    color: #333;
 }
 
 .project-category ul {
@@ -309,54 +319,38 @@ html, body {
 }
 
 .project-category ul li {
-    font-size: 0.875rem; /* 调整字体大小 */
     margin-bottom: 0.5rem;
 }
 
 .project-category ul li a {
-    color: var(--font-color);
     text-decoration: none;
-    display: inline-block;
-    position: relative;
-    transition: color 0.3s, transform 0.3s;
-    white-space: nowrap; /* 确保文字不换行 */
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.project-category ul li a:hover,
-.project-category ul li a.active {
-    color: var(--primary-color); /* 文字变绿 */
-    transform: scale(1.1); /* 文字放大效果 */
-    z-index: 1; /* 确保文字放大时不被裁切 */
+.project-category ul li a:hover {
+    color: #ff4081;
 }
 
+/* 项目图片样式 */
 .projects-images {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* 调整间距 */
-    align-items: flex-end; /* 确保图片靠右 */
-    justify-content: flex-start; /* 确保图片上方对齐 */
-    position: relative; /* 确保图片位置固定 */
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
 }
 
 .project-image {
-    max-width: 80%; /* 调整图片大小 */
-    height: auto;
-    border-radius: 4px; /* 调整圆角大小 */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* 添加过渡效果 */
-    opacity: 0; /* 初始隐藏 */
-    position: absolute; /* 确保图片位置固定 */
-    right: 0; /* 确保图片右对齐 */
-    top: 0; /* 确保图片上对齐 */
+    display: none;
+    width: 100%;
+    border-radius: 8px;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .project-image.active {
-    opacity: 1; /* 显示图片 */
-    position: relative; /* 确保图片位置固定 */
-}
-
-.project-image:hover {
-    transform: scale(1.05);
+    display: block;
+    opacity: 1;
 }
 
 /* 按钮样式 */
@@ -365,11 +359,77 @@ html, body {
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: #fff;
     border: none;
-    padding: 10px;
+    padding: 1rem;
     cursor: pointer;
-    z-index:
+    transition: background-color 0.3s;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* 自适应设计 */
+@media (max-width: 768px) {
+    .projects-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-category {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .projects-images {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .prev-button, .next-button {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .project-category h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-category ul li a {
+        font-size: 1rem;
+    }
+
+    .prev-button, .next-button {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
 
 /* 联系表单样式 */
 .contact-header {
