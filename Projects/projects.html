@@ -17,30 +17,6 @@
             height: 100vh;
             overflow: hidden;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-        }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a.active {
-            color: #ff4081;
-        }
         .container {
             display: flex;
             flex: 1;
@@ -51,11 +27,6 @@
             overflow-y: auto;
             padding: 2rem;
             background-color: #fff;
-        }
-        .projects-images {
-            flex: 1;
-            position: relative;
-            overflow: hidden;
         }
         .project-category {
             margin-bottom: 2rem;
@@ -80,6 +51,11 @@
         .project-category ul li a:hover {
             color: #ff4081;
         }
+        .projects-images {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
         .project-image {
             display: none;
             width: 100%;
@@ -93,12 +69,6 @@
         .project-image.active {
             display: block;
             opacity: 1;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
         }
         /* 自适应设计 */
         @media (max-width: 768px) {
@@ -176,15 +146,22 @@
             const projectLinks = document.querySelectorAll('.project-category ul li a');
             const projectImages = document.querySelectorAll('.project-image');
 
+            function showImage(imageId) {
+                projectImages.forEach(img => {
+                    img.classList.remove('active');
+                });
+                document.getElementById(imageId).classList.add('active');
+            }
+
             projectLinks.forEach(link => {
                 link.addEventListener('mouseenter', function() {
                     const imageId = this.getAttribute('data-image');
-                    projectImages.forEach(img => {
-                        img.classList.remove('active');
-                    });
-                    document.getElementById(imageId).classList.add('active');
+                    showImage(imageId);
                 });
             });
+
+            // 默认显示第一个项目的图片
+            showImage('image1');
         });
     </script>
 </body>
