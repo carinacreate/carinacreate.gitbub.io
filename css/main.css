@@ -378,14 +378,6 @@ nav ul li a.active {
     right: 0;
 }
 
-/* 页脚样式 */
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
-}
-
 /* 自适应设计 */
 @media (max-width: 768px) {
     .projects-content {
@@ -409,14 +401,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-
     .project-category h2 {
         font-size: 1.2rem;
     }
