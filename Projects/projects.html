@@ -48,34 +48,27 @@
             font-weight: bold;
             transition: color 0.3s;
         }
-        .project-category ul li a:hover {
+        .project-category ul li a:hover,
+        .project-category ul li a.active {
             color: #ff4081;
         }
-        .projects-images {
+        .project-details {
             flex: 1;
-            position: relative;
-            overflow: hidden;
+            overflow-y: auto;
+            padding: 2rem;
+            background-color: #fff;
         }
-        .project-image {
-            display: none;
+        .project-details iframe {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-        .project-image.active {
-            display: block;
-            opacity: 1;
+            border: none;
         }
         /* 自适应设计 */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
             }
-            .projects-content, .projects-images {
+            .projects-content, .project-details {
                 flex: none;
                 width: 100%;
                 height: 50vh;
@@ -100,42 +93,33 @@
             <div class="project-category">
                 <h2>ART WORKS</h2>
                 <ul>
-                    <li><a href="midjourney.html" data-image="image1"><span>#01 Midjourney Projects</span></a></li>
-                    <li><a href="3d.html" data-image="image2"><span>#02 3D Projects</span></a></li>
-                    <li><a href="photographic.html" data-image="image3"><span>#03 Photographic Works</span></a></li>
-                    <li><a href="shortfilm.html" data-image="image4"><span>#04 Short Film Works</span></a></li>
+                    <li><a href="midjourney.html" data-page="midjourney.html"><span>#01 Midjourney Projects</span></a></li>
+                    <li><a href="3d.html" data-page="3d.html"><span>#02 3D Projects</span></a></li>
+                    <li><a href="photographic.html" data-page="photographic.html"><span>#03 Photographic Works</span></a></li>
+                    <li><a href="shortfilm.html" data-page="shortfilm.html"><span>#04 Short Film Works</span></a></li>
                 </ul>
             </div>
             <div class="project-category">
                 <h2>2017 - 2024</h2>
                 <h2>WORK EXAMPLES</h2>
                 <ul>
-                    <li><a href="truesight.html" data-image="image5"><span>#05 TRUESIGHT Work Examples</span></a></li>
-                    <li><a href="xiaomi.html" data-image="image6"><span>#06 XIAOMI Work Examples</span></a></li>
-                    <li><a href="bytedance.html" data-image="image7"><span>#07 BYTEDANCE Work Examples</span></a></li>
-                    <li><a href="metu.html" data-image="image8"><span>#08 METU Work Examples</span></a></li>
+                    <li><a href="truesight.html" data-page="truesight.html"><span>#05 TRUESIGHT Work Examples</span></a></li>
+                    <li><a href="xiaomi.html" data-page="xiaomi.html"><span>#06 XIAOMI Work Examples</span></a></li>
+                    <li><a href="bytedance.html" data-page="bytedance.html"><span>#07 BYTEDANCE Work Examples</span></a></li>
+                    <li><a href="metu.html" data-page="metu.html"><span>#08 METU Work Examples</span></a></li>
                 </ul>
             </div>
             <div class="project-category">
                 <h2>2015 - 2016</h2>
                 <h2>FASHION JOURNEY</h2>
                 <ul>
-                    <li><a href="graduation.html" data-image="image9"><span>#09 Graduation Project</span></a></li>
-                    <li><a href="cjyao.html" data-image="image10"><span>#10 C.J.YAO Work Examples</span></a></li>
+                    <li><a href="graduation.html" data-page="graduation.html"><span>#09 Graduation Project</span></a></li>
+                    <li><a href="cjyao.html" data-page="cjyao.html"><span>#10 C.J.YAO Work Examples</span></a></li>
                 </ul>
             </div>
         </section>
-        <div class="projects-images">
-            <img src="../images/projects-images/projects-image1.png" alt="Project 1" class="project-image active" id="image1">
-            <img src="../images/projects-images/projects-image2.png" alt="Project 2" class="project-image" id="image2">
-            <img src="../images/projects-images/projects-image3.png" alt="Project 3" class="project-image" id="image3">
-            <img src="../images/projects-images/projects-image4.png" alt="Project 4" class="project-image" id="image4">
-            <img src="../images/projects-images/projects-image5.png" alt="Project 5" class="project-image" id="image5">
-            <img src="../images/projects-images/projects-image6.png" alt="Project 6" class="project-image" id="image6">
-            <img src="../images/projects-images/projects-image7.png" alt="Project 7" class="project-image" id="image7">
-            <img src="../images/projects-images/projects-image8.png" alt="Project 8" class="project-image" id="image8">
-            <img src="../images/projects-images/projects-image9.png" alt="Project 9" class="project-image" id="image9">
-            <img src="../images/projects-images/projects-image10.png" alt="Project 10" class="project-image" id="image10">
+        <div class="project-details">
+            <iframe src="midjourney.html" id="project-frame"></iframe>
         </div>
     </div>
     <footer>
@@ -144,24 +128,25 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const projectLinks = document.querySelectorAll('.project-category ul li a');
-            const projectImages = document.querySelectorAll('.project-image');
+            const projectFrame = document.getElementById('project-frame');
 
-            function showImage(imageId) {
-                projectImages.forEach(img => {
-                    img.classList.remove('active');
-                });
-                document.getElementById(imageId).classList.add('active');
+            function showPage(pageUrl) {
+                projectFrame.src = pageUrl;
             }
 
             projectLinks.forEach(link => {
-                link.addEventListener('mouseenter', function() {
-                    const imageId = this.getAttribute('data-image');
-                    showImage(imageId);
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    projectLinks.forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                    const pageUrl = this.getAttribute('data-page');
+                    showPage(pageUrl);
                 });
             });
 
-            // 默认显示第一个项目的图片
-            showImage('image1');
+            // 默认选中第一个项目并显示其页面
+            projectLinks[0].classList.add('active');
+            showPage(projectLinks[0].getAttribute('data-page'));
         });
     </script>
 </body>
