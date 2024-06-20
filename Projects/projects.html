@@ -12,6 +12,10 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
         }
         header {
             background-color: #333;
@@ -37,15 +41,24 @@
         nav ul li a.active {
             color: #ff4081;
         }
-        .projects-content {
+        .container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex: 1;
+            overflow: hidden;
+        }
+        .projects-content {
+            flex: 1;
+            overflow-y: auto;
             padding: 2rem;
+            background-color: #fff;
+        }
+        .projects-images {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
         }
         .project-category {
-            margin: 1rem;
-            text-align: center;
+            margin-bottom: 2rem;
         }
         .project-category h2 {
             margin-bottom: 1rem;
@@ -67,47 +80,36 @@
         .project-category ul li a:hover {
             color: #ff4081;
         }
-        .projects-images {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 2rem auto;
-        }
         .project-image {
             display: none;
             width: 100%;
-            border-radius: 8px;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
             transition: opacity 0.5s ease-in-out;
         }
         .project-image.active {
             display: block;
             opacity: 1;
         }
-        .prev-button, .next-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: none;
-            padding: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .prev-button:hover, .next-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        .prev-button {
-            left: 0;
-        }
-        .next-button {
-            right: 0;
-        }
         footer {
             text-align: center;
             padding: 1rem 0;
             background-color: #333;
             color: #fff;
+        }
+        /* 自适应设计 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .projects-content, .projects-images {
+                flex: none;
+                width: 100%;
+                height: 50vh;
+            }
         }
     </style>
 </head>
@@ -123,7 +125,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <div class="container">
         <section class="projects-content">
             <div class="project-category">
                 <h2>ART WORKS</h2>
@@ -154,20 +156,18 @@
             </div>
         </section>
         <div class="projects-images">
-            <button class="prev-button">&lt;</button>
-            <button class="next-button">&gt;</button>
-            <a href="midjourney.html"><img src="../images/projects-images/projects-image1.png" alt="Project 1" class="project-image active" id="image1"></a>
-            <a href="3d.html"><img src="../images/projects-images/projects-image2.png" alt="Project 2" class="project-image" id="image2"></a>
-            <a href="photographic.html"><img src="../images/projects-images/projects-image3.png" alt="Project 3" class="project-image" id="image3"></a>
-            <a href="shortfilm.html"><img src="../images/projects-images/projects-image4.png" alt="Project 4" class="project-image" id="image4"></a>
-            <a href="truesight.html"><img src="../images/projects-images/projects-image5.png" alt="Project 5" class="project-image" id="image5"></a>
-            <a href="xiaomi.html"><img src="../images/projects-images/projects-image6.png" alt="Project 6" class="project-image" id="image6"></a>
-            <a href="bytedance.html"><img src="../images/projects-images/projects-image7.png" alt="Project 7" class="project-image" id="image7"></a>
-            <a href="metu.html"><img src="../images/projects-images/projects-image8.png" alt="Project 8" class="project-image" id="image8"></a>
-            <a href="graduation.html"><img src="../images/projects-images/projects-image9.png" alt="Project 9" class="project-image" id="image9"></a>
-            <a href="cjyao.html"><img src="../images/projects-images/projects-image10.png" alt="Project 10" class="project-image" id="image10"></a>
+            <img src="../images/projects-images/projects-image1.png" alt="Project 1" class="project-image active" id="image1">
+            <img src="../images/projects-images/projects-image2.png" alt="Project 2" class="project-image" id="image2">
+            <img src="../images/projects-images/projects-image3.png" alt="Project 3" class="project-image" id="image3">
+            <img src="../images/projects-images/projects-image4.png" alt="Project 4" class="project-image" id="image4">
+            <img src="../images/projects-images/projects-image5.png" alt="Project 5" class="project-image" id="image5">
+            <img src="../images/projects-images/projects-image6.png" alt="Project 6" class="project-image" id="image6">
+            <img src="../images/projects-images/projects-image7.png" alt="Project 7" class="project-image" id="image7">
+            <img src="../images/projects-images/projects-image8.png" alt="Project 8" class="project-image" id="image8">
+            <img src="../images/projects-images/projects-image9.png" alt="Project 9" class="project-image" id="image9">
+            <img src="../images/projects-images/projects-image10.png" alt="Project 10" class="project-image" id="image10">
         </div>
-    </main>
+    </div>
     <footer>
         <p>&copy; 2024 ZHANGWENQING.</p>
     </footer>
@@ -175,35 +175,16 @@
         document.addEventListener('DOMContentLoaded', function() {
             const projectLinks = document.querySelectorAll('.project-category ul li a');
             const projectImages = document.querySelectorAll('.project-image');
-            const prevButton = document.querySelector('.prev-button');
-            const nextButton = document.querySelector('.next-button');
-            let currentIndex = 0;
 
-            function showImage(index) {
-                projectImages.forEach((img, i) => {
-                    img.classList.toggle('active', i === index);
-                });
-            }
-
-            projectLinks.forEach((link, index) => {
+            projectLinks.forEach(link => {
                 link.addEventListener('mouseenter', function() {
-                    currentIndex = index;
-                    showImage(currentIndex);
+                    const imageId = this.getAttribute('data-image');
+                    projectImages.forEach(img => {
+                        img.classList.remove('active');
+                    });
+                    document.getElementById(imageId).classList.add('active');
                 });
             });
-
-            prevButton.addEventListener('click', function() {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : projectImages.length - 1;
-                showImage(currentIndex);
-            });
-
-            nextButton.addEventListener('click', function() {
-                currentIndex = (currentIndex < projectImages.length - 1) ? currentIndex + 1 : 0;
-                showImage(currentIndex);
-            });
-
-            // 默认显示第一个项目的图片
-            showImage(currentIndex);
         });
     </script>
 </body>
