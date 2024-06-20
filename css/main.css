@@ -257,47 +257,9 @@ main {
     transform-origin: left;
 }
 
-/* 基本样式 */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-/* 头部样式 */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a.active {
-    color: #ff4081;
-}
-
 /* 项目内容样式 */
 .projects-content {
-    flex: 1;
+    flex: 0 0 35%; /* 左侧内容占35%宽度 */
     overflow-y: auto;
     padding: 2rem;
     background-color: #fff;
@@ -328,31 +290,23 @@ nav ul li a.active {
     transition: color 0.3s;
 }
 
-.project-category ul li a:hover {
+.project-category ul li a:hover,
+.project-category ul li a.active {
     color: #ff4081;
 }
 
-/* 项目图片样式 */
-.projects-images {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
+/* 项目详情样式 */
+.project-details {
+    flex: 1; /* 右侧内容占剩余宽度 */
+    overflow-y: auto;
+    padding: 2rem;
+    background-color: #fff;
 }
 
-.project-image {
-    display: none;
+.project-details iframe {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.project-image.active {
-    display: block;
-    opacity: 1;
+    border: none;
 }
 
 /* 自适应设计 */
@@ -360,7 +314,7 @@ nav ul li a.active {
     .container {
         flex-direction: column;
     }
-    .projects-content, .projects-images {
+    .projects-content, .project-details {
         flex: none;
         width: 100%;
         height: 50vh;
