@@ -1,33 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
     const projectLinks = document.querySelectorAll('.project-category ul li a');
     const projectImages = document.querySelectorAll('.project-image');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    let currentIndex = 0;
 
-    projectLinks.forEach(link => {
+    function showImage(index) {
+        projectImages.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
+    }
+
+    projectLinks.forEach((link, index) => {
         link.addEventListener('mouseenter', function() {
-            const imageId = this.getAttribute('data-image');
-            projectImages.forEach(img => {
-                if (img.id === imageId) {
-                    img.classList.add('active');
-                } else {
-                    img.classList.remove('active');
-                }
-            });
+            currentIndex = index;
+            showImage(currentIndex);
         });
+    });
 
-        link.addEventListener('mouseleave', function() {
-            projectImages.forEach(img => {
-                img.classList.remove('active');
-            });
-            document.getElementById('image1').classList.add('active');
-        });
+    prevButton.addEventListener('click', function() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : projectImages.length - 1;
+        showImage(currentIndex);
+    });
+
+    nextButton.addEventListener('click', function() {
+        currentIndex = (currentIndex < projectImages.length - 1) ? currentIndex + 1 : 0;
+        showImage(currentIndex);
     });
 
     // 默认显示第一个项目的图片
-    projectImages.forEach(img => {
-        if (img.id === 'image1') {
-            img.classList.add('active');
-        } else {
-            img.classList.remove('active');
-        }
-    });
+    showImage(currentIndex);
 });
