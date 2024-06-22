@@ -97,7 +97,7 @@
             height: 100%;
             border: none;
         }
-        /* 自适应设计 */
+        /* Responsive design */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -180,7 +180,7 @@
                 });
             });
 
-            // 默认选中第一个项目并显示其页面
+            // Default to showing the first project
             projectLinks[0].classList.add('active');
             showPage(projectLinks[0].getAttribute('data-page'));
         });
