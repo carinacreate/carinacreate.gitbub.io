@@ -382,27 +382,39 @@ main {
     transform-origin: left;
 }
 
-/* 项目内容样式 */
+/* 项目页面样式 */
+
+/* 项目容器 */
+.projects-container {
+    margin-top: var(--nav-height); /* 确保内容不被固定导航栏遮挡 */
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+/* 项目列表部分 */
 .projects-content {
     flex: 0 0 35%; /* 左侧内容占35%宽度 */
     overflow-y: auto;
     padding: 2rem;
-    background-color: #fff;
-    box-sizing: border-box; /* 确保内边距包含在宽度内 */
+    background-color: var(--bg-color);
+    box-sizing: border-box;
 }
 
+/* 项目类别 */
 .project-category {
     margin-bottom: 2rem;
 }
 
 .project-category h2 {
     margin-bottom: 1rem;
-    color: #333;
-    position: sticky; /* 确保标题在滚动时保持可见 */
+    color: var(--font-color);
+    position: sticky;
     top: 0;
-    background-color: #fff; /* 背景颜色与内容一致 */
-    padding-top: 1rem; /* 确保顶部有足够的空间 */
-    z-index: 1; /* 确保标题在内容上方 */
+    background-color: var(--bg-color);
+    padding-top: 1rem;
+    z-index: 1;
 }
 
 .project-category ul {
@@ -416,22 +428,22 @@ main {
 
 .project-category ul li a {
     text-decoration: none;
-    color: #333;
+    color: var(--font-color);
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .project-category ul li a:hover,
 .project-category ul li a.active {
-    color: #ff4081;
+    color: var(--primary-color);
 }
 
-/* 项目详情样式 */
+/* 项目详情部分 */
 .project-details {
     flex: 1; /* 右侧内容占剩余宽度 */
     overflow-y: auto;
     padding: 2rem;
-    background-color: #fff;
+    background-color: var(--bg-color);
 }
 
 .project-details iframe {
@@ -440,15 +452,28 @@ main {
     border: none;
 }
 
-/* 自适应设计 */
+/* 响应式设计 */
 @media (max-width: 768px) {
-    .container {
+    .projects-container {
         flex-direction: column;
+        padding: 1rem;
     }
-    .projects-content, .project-details {
+
+    .projects-content,
+    .project-details {
         flex: none;
         width: 100%;
-        height: 50vh;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-category h2 {
+        font-size: 1.25rem;
+    }
+
+    .project-category ul li a {
+        font-size: 0.9rem;
     }
 }
 
