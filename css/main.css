@@ -409,7 +409,7 @@ main {
 
 .project-category h2 {
     margin-bottom: 0.5rem; /* 缩小间距 */
-    color: #888; /* 改成灰色 */
+    color: rgba(0, 0, 0, 0.5); /* 改成50%当前文字颜色 */
     position: sticky;
     top: 0;
     background-color: var(--bg-color);
@@ -482,6 +482,11 @@ main {
     .project-category ul li a {
         font-size: 0.75rem; /* 缩小字体 */
     }
+}
+
+/* 选中文字后的颜色改成绿色 */
+::selection {
+    color: green;
 }
 
 /* 联系表单样式 */
