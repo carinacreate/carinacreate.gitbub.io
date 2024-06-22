@@ -34,7 +34,7 @@ body {
     max-height: 600px; /* 确保图片最大高度 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer; /* 鼠标悬停时显示为指针 */
-    transition: opacity 0.5s ease-in-out; /* 透明度过渡效果 */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* 过渡效果 */
 }
 
 /* Modal styles */
