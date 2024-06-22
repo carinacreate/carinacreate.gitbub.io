@@ -429,7 +429,7 @@ main {
 
 .project-category ul li a {
     text-decoration: none;
-    color: var(--font-color);
+    color: #00ff00; /* 修改这里的颜色为绿色 */
     font-weight: bold;
     transition: color 0.3s;
     font-size: 0.75rem; /* 缩小字体 */
