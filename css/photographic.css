@@ -32,24 +32,8 @@ body {
 .image-section img {
     width: 100%; /* 确保图片和页面一样宽 */
     height: auto;
-    max-height: 700; /* 确保图片最大高度 */
+    max-height: 600px; /* 确保图片最大高度 */
     cursor: pointer; /* 鼠标悬停时显示为指针 */
-}
-
-.artwork-section {
-    flex: 1;
-    min-width: 200px;
-    margin-top: 3rem; /* 确保文字位置和图片对齐 */
-}
-
-.artwork-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.artwork-section p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
 }
 
 /* Modal styles */
