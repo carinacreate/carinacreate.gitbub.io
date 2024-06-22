@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'flex';
             modalImg.src = this.src;
             document.body.style.overflow = 'hidden'; // 禁止背景滚动
-            document.body.style.filter = 'blur(5px)'; // 背景高斯模糊
         });
     });
 
@@ -18,14 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
     closeBtn.addEventListener('click', function() {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto'; // 恢复背景滚动
-        document.body.style.filter = 'none'; // 移除背景高斯模糊
     });
 
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto'; // 恢复背景滚动
-            document.body.style.filter = 'none'; // 移除背景高斯模糊
         }
     });
 
