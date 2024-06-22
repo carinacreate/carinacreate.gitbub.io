@@ -583,15 +583,13 @@ main {
 
 /* 页脚样式 */
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: transparent;
     text-align: center;
     padding: 10px 0;
-    border-top: none; /* 取消横线 */
+    background-color: transparent;
     font-size: 0.75rem; /* 确保字体大小一致 */
     color: var(--font-color);
+    border-top: none; /* 取消横线 */
+    margin-top: auto; /* 确保页脚始终在页面底部 */
 }
 
 /* 主页页脚样式 */
@@ -607,7 +605,6 @@ footer.other-footer p {
 /* 自适应页脚 */
 @media (max-width: 768px) {
     footer {
-        position: static; /* 取消固定 */
         border-top: none; /* 取消横线 */
     }
 }
