@@ -28,4 +28,23 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.filter = 'none'; // 移除背景高斯模糊
         }
     });
+
+    // 滚动时调整图片透明度
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+
+        images.forEach(img => {
+            const imgTop = img.getBoundingClientRect().top + scrollTop;
+            const imgHeight = img.height;
+
+            if (scrollTop + windowHeight > imgTop && scrollTop < imgTop + imgHeight) {
+                const visibleHeight = Math.min(windowHeight, imgTop + imgHeight - scrollTop);
+                const opacity = visibleHeight / imgHeight;
+                img.style.opacity = opacity;
+            } else {
+                img.style.opacity = 1;
+            }
+        });
+    });
 });
