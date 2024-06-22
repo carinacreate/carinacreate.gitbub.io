@@ -390,31 +390,32 @@ main {
     padding-top: 2rem;
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem; /* 缩小间距 */
 }
 
 /* 项目列表部分 */
 .projects-content {
-    flex: 0 0 35%; /* 左侧内容占35%宽度 */
+    flex: 0 0 30%; /* 左侧内容占30%宽度 */
     overflow-y: auto;
-    padding: 2rem;
+    padding: 1rem; /* 缩小内边距 */
     background-color: var(--bg-color);
     box-sizing: border-box;
 }
 
 /* 项目类别 */
 .project-category {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem; /* 缩小间距 */
 }
 
 .project-category h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* 缩小间距 */
     color: var(--font-color);
     position: sticky;
     top: 0;
     background-color: var(--bg-color);
-    padding-top: 1rem;
+    padding-top: 0.5rem; /* 缩小内边距 */
     z-index: 1;
+    font-size: 0.875rem; /* 缩小字体 */
 }
 
 .project-category ul {
@@ -423,7 +424,7 @@ main {
 }
 
 .project-category ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem; /* 缩小间距 */
 }
 
 .project-category ul li a {
@@ -431,6 +432,7 @@ main {
     color: var(--font-color);
     font-weight: bold;
     transition: color 0.3s;
+    font-size: 0.75rem; /* 缩小字体 */
 }
 
 .project-category ul li a:hover,
@@ -442,8 +444,11 @@ main {
 .project-details {
     flex: 1; /* 右侧内容占剩余宽度 */
     overflow-y: auto;
-    padding: 2rem;
+    padding: 1rem; /* 缩小内边距 */
     background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-details iframe {
@@ -469,11 +474,11 @@ main {
 
 @media (max-width: 480px) {
     .project-category h2 {
-        font-size: 1.25rem;
+        font-size: 1rem; /* 缩小字体 */
     }
 
     .project-category ul li a {
-        font-size: 0.9rem;
+        font-size: 0.75rem; /* 缩小字体 */
     }
 }
 
