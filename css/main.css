@@ -486,7 +486,8 @@ main {
 
 /* 选中文字后的颜色改成绿色 */
 ::selection {
-    color: green;
+    background: #b3d4fc; /* 默认背景颜色 */
+    color: green; /* 选中文字颜色改成绿色 */
 }
 
 /* 联系表单样式 */
