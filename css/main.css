@@ -437,7 +437,7 @@ main {
 
 .project-category ul li a:hover,
 .project-category ul li a.active {
-    color: var(--primary-color);
+    color: #00ff00; /* 选中文字颜色改为绿色 */
 }
 
 /* 项目详情部分 */
@@ -456,6 +456,74 @@ main {
     width: 100%;
     height: calc(100% - 3rem); /* 确保iframe高度不被遮挡 */
     border: none;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: white; /* 背景颜色变成白色 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out; /* 添加缩放过渡效果 */
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
 }
 
 /* 响应式设计 */
