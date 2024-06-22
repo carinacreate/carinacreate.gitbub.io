@@ -386,7 +386,6 @@ main {
 
 /* 项目容器 */
 .projects-container {
-    margin-top: var(--nav-height); /* 确保内容不被固定导航栏遮挡 */
     padding-top: 2rem;
     display: flex;
     flex-direction: row;
