@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // 处理项目图片切换
     const projectLinks = document.querySelectorAll('.project-category ul li a');
