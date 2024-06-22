@@ -16,7 +16,7 @@ body {
 
 .content {
     display: flex;
-    flex-direction: row; /* 改为行方向 */
+    flex-direction: column; /* 改为列方向 */
     gap: 2rem;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .image-section img {
-    width: 100%;
+    width: 100%; /* 确保图片和页面一样宽 */
     height: auto;
     max-height: 600px; /* 确保图片最大高度 */
     cursor: pointer; /* 鼠标悬停时显示为指针 */
