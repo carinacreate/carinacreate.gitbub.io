@@ -128,6 +128,15 @@
             <iframe src="midjourney.html" id="project-frame"></iframe>
         </div>
     </div>
+
+        <!-- Modal for enlarged image -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const projectLinks = document.querySelectorAll('.project-category ul li a');
