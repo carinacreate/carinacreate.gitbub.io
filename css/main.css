@@ -400,6 +400,7 @@ main {
     padding: 1rem; /* 缩小内边距 */
     background-color: var(--bg-color);
     box-sizing: border-box;
+    margin-top: 4rem; /* 确保左侧内容不被导航栏遮挡 */
 }
 
 /* 项目类别 */
@@ -449,6 +450,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 4rem; /* 确保右侧内容不被导航栏遮挡 */
 }
 
 .project-details iframe {
@@ -469,6 +471,7 @@ main {
         flex: none;
         width: 100%;
         height: auto;
+        margin-top: 2rem; /* 确保内容不被导航栏遮挡 */
     }
 }
 
