@@ -589,20 +589,18 @@ footer {
     background-color: transparent;
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid var(--font-color);
+    border-top: none; /* 取消横线 */
+    font-size: 0.75rem; /* 确保字体大小一致 */
+    color: var(--font-color);
 }
 
 /* 主页页脚样式 */
 footer.home-footer p {
-    font-size: 0.75rem;
-    color: var(--font-color);
     margin: 0;
 }
 
 /* 其他页面页脚样式 */
 footer.other-footer p {
-    font-size: 0.75rem;
-    color: var(--font-color);
     margin: 0;
 }
 
@@ -613,7 +611,6 @@ footer.other-footer p {
         border-top: none; /* 取消横线 */
     }
 }
-
 
 @media (max-width: 480px) {
     .header-content h1 {
@@ -644,4 +641,3 @@ footer.other-footer p {
         color: var(--font-color);
     }
 }
-
