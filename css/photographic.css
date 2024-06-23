@@ -8,10 +8,10 @@ body {
 }
 
 .container {
-    max-width: 1400px; /* 增加页面宽度 */
-    margin: 0 auto;
-    padding: 2rem;
-    flex: 1;
+display: flex;
+flex: 1;
+overflow: hidden;
+margin-top: 45px; /* 确保主内容从导航栏高度45px之后开始 */
 }
 
 .content {
@@ -26,7 +26,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 3rem; /* 确保图片位置和左边Artwork文字对齐 */
 }
 
 .image-section img {
