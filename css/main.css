@@ -405,7 +405,7 @@ main {
 
 /* 项目类别 */
 .project-category {
-    margin-bottom: 0.5rem; /* 缩小间距 */
+    margin-bottom: 1.5rem; /* 增加间隔 */
 }
 
 .project-category h2 {
@@ -431,7 +431,7 @@ main {
 .project-category ul li a {
     text-decoration: none;
     color: var(--font-color); 
-    font-weight: bold;
+    font-weight: normal; /* 取消加粗 */
     transition: color 0.3s;
     font-size: 1rem; /* 增大字体 */
 }
@@ -439,6 +439,20 @@ main {
 .project-category ul li a:hover,
 .project-category ul li a.active {
     color: var(--primary-color); /* 修改这里的颜色为绿色 */
+}
+
+/* 特定项目取消加粗 */
+.project-category ul li a[data-page="midjourney.html"],
+.project-category ul li a[data-page="3d.html"],
+.project-category ul li a[data-page="photographic.html"],
+.project-category ul li a[data-page="shortfilm.html"],
+.project-category ul li a[data-page="truesight.html"],
+.project-category ul li a[data-page="xiaomi.html"],
+.project-category ul li a[data-page="bytedance.html"],
+.project-category ul li a[data-page="metu.html"],
+.project-category ul li a[data-page="graduation.html"],
+.project-category ul li a[data-page="cjyao.html"] {
+    font-weight: normal; /* 取消加粗 */
 }
 
 /* 项目详情部分 */
