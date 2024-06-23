@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -30,7 +31,7 @@ margin-top: 45px; /* 确保主内容从导航栏高度45px之后开始 */
 
 .image-section img {
     width: 100%; /* 确保图片和页面一样宽 */
-    height: 1px; /* 设置导航栏高度 */
+    height: auto;
     max-height: 800px; /* 确保图片最大高度 */
     cursor: pointer; /* 鼠标悬停时显示为指针 */
 }
@@ -40,3 +41,4 @@ margin-top: 45px; /* 确保主内容从导航栏高度45px之后开始 */
         flex-direction: column;
     }
 }
+
