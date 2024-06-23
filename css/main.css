@@ -345,7 +345,7 @@ main {
 
 /* 正文样式 */
 .intro p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     line-height: 1.6;
     margin-bottom: 0.25rem;
@@ -399,7 +399,7 @@ main {
     padding: 1rem; /* 缩小内边距 */
     background-color: var(--bg-color);
     box-sizing: border-box;
-    margin-top: 3rem; /* 确保左侧内容不被导航栏遮挡 */
+    align-items: flex-start; /* 确保项目从顶部开始对齐 */
 }
 
 /* 项目类别 */
@@ -449,7 +449,6 @@ main {
     display: flex;
     align-items: flex-start; /* 确保内容从顶部开始对齐 */
     justify-content: flex-start;
-    margin-top: 3rem; /* 确保右侧内容不被导航栏遮挡 */
 }
 
 .project-details iframe {
