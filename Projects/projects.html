@@ -6,79 +6,6 @@
     <title>Projects</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .container {
-            display: flex;
-            flex: 1;
-            overflow: hidden;
-        }
-        .projects-content {
-            flex: 0 0 30%;
-            padding: 1rem;
-            background-color: #fff;
-            overflow-y: auto;
-        }
-        .project-category {
-            margin-bottom: 1rem;
-        }
-        .project-category h2 {
-            margin-bottom: 0.5rem;
-            color: #333;
-            font-size: 1rem;
-        }
-        .project-category ul {
-            list-style: none;
-            padding: 0;
-        }
-        .project-category ul li {
-            margin-bottom: 0.25rem;
-        }
-        .project-category ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: color 0.3s;
-            font-size: 0.875rem;
-        }
-        .project-category ul li a:hover,
-        .project-category ul li a.active {
-            color: #ff4081;
-        }
-        .project-details {
-            flex: 1;
-            padding: 1rem;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .project-details iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        /* 自适应设计 */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            .projects-content, .project-details {
-                flex: none;
-                width: 100%;
-                height: 50vh;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -128,29 +55,6 @@
             <iframe src="midjourney.html" id="project-frame"></iframe>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const projectLinks = document.querySelectorAll('.project-category ul li a');
-            const projectFrame = document.getElementById('project-frame');
-
-            function showPage(pageUrl) {
-                projectFrame.src = pageUrl;
-            }
-
-            projectLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    projectLinks.forEach(link => link.classList.remove('active'));
-                    this.classList.add('active');
-                    const pageUrl = this.getAttribute('data-page');
-                    showPage(pageUrl);
-                });
-            });
-
-            // 默认选中第一个项目并显示其页面
-            projectLinks[0].classList.add('active');
-            showPage(projectLinks[0].getAttribute('data-page'));
-        });
-    </script>
+    <script src="projects.js"></script>
 </body>
 </html>
