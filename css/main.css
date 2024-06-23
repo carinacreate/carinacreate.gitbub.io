@@ -405,18 +405,18 @@ main {
 
 /* 项目类别 */
 .project-category {
-    margin-bottom: 1rem; /* 缩小间距 */
+    margin-bottom: 0.5rem; /* 缩小间距 */
 }
 
 .project-category h2 {
-    margin-bottom: 0.5rem; /* 缩小间距 */
+    margin-bottom: 0.25rem; /* 缩小间距 */
     color: rgba(0, 0, 0, 0.5); /* 改成50%当前文字颜色 */
     position: sticky;
     top: 0;
     background-color: var(--bg-color);
-    padding-top: 0.5rem; /* 缩小内边距 */
+    padding-top: 0.25rem; /* 缩小内边距 */
     z-index: 1;
-    font-size: 0.875rem; /* 缩小字体 */
+    font-size: 1rem; /* 增大字体 */
 }
 
 .project-category ul {
@@ -425,7 +425,7 @@ main {
 }
 
 .project-category ul li {
-    margin-bottom: 0.25rem; /* 缩小间距 */
+    margin-bottom: 0.125rem; /* 缩小间距 */
 }
 
 .project-category ul li a {
@@ -433,7 +433,7 @@ main {
     color: var(--font-color); 
     font-weight: bold;
     transition: color 0.3s;
-    font-size: 0.75rem; /* 缩小字体 */
+    font-size: 1rem; /* 增大字体 */
 }
 
 .project-category ul li a:hover,
