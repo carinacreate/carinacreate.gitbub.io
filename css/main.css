@@ -429,7 +429,7 @@ main {
 
 .project-category ul li a {
     text-decoration: none;
-    color: #00ff00; /* 修改这里的颜色为绿色 */
+    color: var(--font-color); 
     font-weight: bold;
     transition: color 0.3s;
     font-size: 0.75rem; /* 缩小字体 */
@@ -437,7 +437,7 @@ main {
 
 .project-category ul li a:hover,
 .project-category ul li a.active {
-    color: #00ff00; /* 修改这里的颜色为绿色 */
+    color: var(--primary-color); /* 修改这里的颜色为绿色 */
 }
 
 /* 项目详情部分 */
