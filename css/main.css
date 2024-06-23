@@ -410,7 +410,7 @@ main {
 
 .project-category h2 {
     margin-bottom: 0.25rem; /* 缩小间距 */
-    color: rgba(0, 0, 0, 0.5); /* 改成50%当前文字颜色 */
+    color: rgba(0, 0, 0, 0.3); /* 改成30%当前文字颜色 */
     position: sticky;
     top: 0;
     background-color: var(--bg-color);
@@ -439,20 +439,6 @@ main {
 .project-category ul li a:hover,
 .project-category ul li a.active {
     color: var(--primary-color); /* 修改这里的颜色为绿色 */
-}
-
-/* 特定项目取消加粗 */
-.project-category ul li a[data-page="midjourney.html"],
-.project-category ul li a[data-page="3d.html"],
-.project-category ul li a[data-page="photographic.html"],
-.project-category ul li a[data-page="shortfilm.html"],
-.project-category ul li a[data-page="truesight.html"],
-.project-category ul li a[data-page="xiaomi.html"],
-.project-category ul li a[data-page="bytedance.html"],
-.project-category ul li a[data-page="metu.html"],
-.project-category ul li a[data-page="graduation.html"],
-.project-category ul li a[data-page="cjyao.html"] {
-    font-weight: normal; /* 取消加粗 */
 }
 
 /* 项目详情部分 */
