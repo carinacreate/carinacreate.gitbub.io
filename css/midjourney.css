@@ -8,114 +8,45 @@ body {
     min-height: 100vh;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-}
-
-header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-header .cta-button {
-    padding: 0.5rem 1rem;
-    background-color: #4A7C59;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    flex: 1;
-}
-
-.hero-section {
-    text-align: center;
-    padding: 2rem 0;
-}
-
-.hero-section h1 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.content {
+.image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-
-.image-section {
-    grid-column: span 2;
-}
-
-.image-section img {
-    width: 100%;
-    height: auto;
-}
-
-.text-section {
-    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr); /* 一行展示三张图片 */
+    gap: 1rem; /* 图片之间的间距 */
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
     background-color: #fff;
     border: 1px solid #ddd;
 }
 
-.text-section.yellow-bg {
-    background-color: #ffeb3b;
+.image-item {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
 }
 
-.text-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.text-section p {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.text-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.text-section ul li {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
-}
-
-/* 新增的CSS代码，使照片一行展示3张 */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.image-grid img {
+.image-item img {
     width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.image-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* 响应式设计，确保在较小屏幕上也能正常显示 */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 一行展示两张图片 */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 一行展示一张图片 */
+    }
 }
