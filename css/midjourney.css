@@ -106,3 +106,16 @@ header .cta-button {
     line-height: 1.5;
     margin-bottom: 0.5rem;
 }
+
+/* 新增的CSS代码，使照片一行展示3张 */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
