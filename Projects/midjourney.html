@@ -8,7 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #ffffff; /* 背景颜色设置为白色 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,8 +23,11 @@
         }
         .gallery img {
             width: 100%;
+            max-width: 400px; /* 设置最大宽度 */
+            height: auto; /* 保持纵横比 */
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer; /* 鼠标变为指针 */
         }
         @media (max-width: 768px) {
             .gallery {
@@ -36,21 +39,105 @@
                 grid-template-columns: 1fr;
             }
         }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff; /* 背景颜色设置为白色 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none; /* 默认隐藏 */
+        }
+        .overlay img {
+            max-width: 95%; /* 调整最大宽度 */
+            max-height: 95%; /* 调整最大高度 */
+        }
+        .overlay .arrow {
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #000; /* 线条颜色 */
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .overlay .arrow.left {
+            left: 20px;
+        }
+        .overlay .arrow.right {
+            right: 20px;
+        }
+        .overlay .arrow svg {
+            stroke-width: 1; /* 设置线条的粗细 */
+        }
     </style>
 </head>
 <body>
     <div class="gallery">
         <!-- JavaScript will insert images here -->
     </div>
+    <div class="overlay" id="overlay">
+        <div class="arrow left" id="prev">
+            <svg viewBox="0 0 24 24"><path d="M15.5 19.08L14.08 20.5 6.58 13 14.08 5.5 15.5 6.92 9.42 13z"/></svg>
+        </div>
+        <img id="overlayImg" src="" alt="">
+        <div class="arrow right" id="next">
+            <svg viewBox="0 0 24 24"><path d="M8.5 4.92L9.92 3.5 17.42 11 9.92 18.5 8.5 17.08 14.58 11z"/></svg>
+        </div>
+    </div>
 
     <script>
         const gallery = document.querySelector('.gallery');
+        const overlay = document.getElementById('overlay');
+        const overlayImg = document.getElementById('overlayImg');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+
+        let currentIndex = 0;
+        const images = [];
+
         for (let i = 1; i <= 75; i++) {
             const img = document.createElement('img');
-            img.src = `images/midjourney-image${i}.png`;
+            img.src = `../images/midjourney-images/midjourney-image${i}.png`;
             img.alt = `Image ${i}`;
             gallery.appendChild(img);
+            images.push(img);
+
+            img.addEventListener('click', () => {
+                currentIndex = i - 1;
+                overlay.style.display = 'flex';
+                overlayImg.src = img.src;
+                overlayImg.alt = img.alt;
+            });
         }
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay || e.target === overlayImg) {
+                overlay.style.display = 'none';
+            }
+        });
+
+        prev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            overlayImg.src = images[currentIndex].src;
+            overlayImg.alt = images[currentIndex].alt;
+        });
+
+        next.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            overlayImg.src = images[currentIndex].src;
+            overlayImg.alt = images[currentIndex].alt;
+        });
     </script>
 </body>
 </html>
