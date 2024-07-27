@@ -3,93 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midjourney Projects</title>
-    <link rel="stylesheet" href="midjourney.css">
+    <title>Midjourney Photo Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 90%;
+            max-width: 1200px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="image-grid">
-            <!-- 使用循环生成图片标签 -->
-            <!-- 这里展示从 midjourney-image1.png 到 midjourney-image75.png 的图片 -->
-            <!-- 确保图片路径和文件名正确 -->
-            <!-- 你可以使用服务器端脚本或手动生成这些标签 -->
-            <!-- 下面是手动生成的示例 -->
-            <img src="../images/midjourney-images/midjourney-image1.png" alt="Midjourney Image 1">
-            <img src="../images/midjourney-images/midjourney-image2.png" alt="Midjourney Image 2">
-            <img src="../images/midjourney-images/midjourney-image3.png" alt="Midjourney Image 3">
-            <img src="../images/midjourney-images/midjourney-image4.png" alt="Midjourney Image 4">
-            <img src="../images/midjourney-images/midjourney-image5.png" alt="Midjourney Image 5">
-            <img src="../images/midjourney-images/midjourney-image6.png" alt="Midjourney Image 6">
-            <img src="../images/midjourney-images/midjourney-image7.png" alt="Midjourney Image 7">
-            <img src="../images/midjourney-images/midjourney-image8.png" alt="Midjourney Image 8">
-            <img src="../images/midjourney-images/midjourney-image9.png" alt="Midjourney Image 9">
-            <img src="../images/midjourney-images/midjourney-image10.png" alt="Midjourney Image 10">
-            <img src="../images/midjourney-images/midjourney-image11.png" alt="Midjourney Image 11">
-            <img src="../images/midjourney-images/midjourney-image12.png" alt="Midjourney Image 12">
-            <img src="../images/midjourney-images/midjourney-image13.png" alt="Midjourney Image 13">
-            <img src="../images/midjourney-images/midjourney-image14.png" alt="Midjourney Image 14">
-            <img src="../images/midjourney-images/midjourney-image15.png" alt="Midjourney Image 15">
-            <img src="../images/midjourney-images/midjourney-image16.png" alt="Midjourney Image 16">
-            <img src="../images/midjourney-images/midjourney-image17.png" alt="Midjourney Image 17">
-            <img src="../images/midjourney-images/midjourney-image18.png" alt="Midjourney Image 18">
-            <img src="../images/midjourney-images/midjourney-image19.png" alt="Midjourney Image 19">
-            <img src="../images/midjourney-images/midjourney-image20.png" alt="Midjourney Image 20">
-            <img src="../images/midjourney-images/midjourney-image21.png" alt="Midjourney Image 21">
-            <img src="../images/midjourney-images/midjourney-image22.png" alt="Midjourney Image 22">
-            <img src="../images/midjourney-images/midjourney-image23.png" alt="Midjourney Image 23">
-            <img src="../images/midjourney-images/midjourney-image24.png" alt="Midjourney Image 24">
-            <img src="../images/midjourney-images/midjourney-image25.png" alt="Midjourney Image 25">
-            <img src="../images/midjourney-images/midjourney-image26.png" alt="Midjourney Image 26">
-            <img src="../images/midjourney-images/midjourney-image27.png" alt="Midjourney Image 27">
-            <img src="../images/midjourney-images/midjourney-image28.png" alt="Midjourney Image 28">
-            <img src="../images/midjourney-images/midjourney-image29.png" alt="Midjourney Image 29">
-            <img src="../images/midjourney-images/midjourney-image30.png" alt="Midjourney Image 30">
-            <img src="../images/midjourney-images/midjourney-image31.png" alt="Midjourney Image 31">
-            <img src="../images/midjourney-images/midjourney-image32.png" alt="Midjourney Image 32">
-            <img src="../images/midjourney-images/midjourney-image33.png" alt="Midjourney Image 33">
-            <img src="../images/midjourney-images/midjourney-image34.png" alt="Midjourney Image 34">
-            <img src="../images/midjourney-images/midjourney-image35.png" alt="Midjourney Image 35">
-            <img src="../images/midjourney-images/midjourney-image36.png" alt="Midjourney Image 36">
-            <img src="../images/midjourney-images/midjourney-image37.png" alt="Midjourney Image 37">
-            <img src="../images/midjourney-images/midjourney-image38.png" alt="Midjourney Image 38">
-            <img src="../images/midjourney-images/midjourney-image39.png" alt="Midjourney Image 39">
-            <img src="../images/midjourney-images/midjourney-image40.png" alt="Midjourney Image 40">
-            <img src="../images/midjourney-images/midjourney-image41.png" alt="Midjourney Image 41">
-            <img src="../images/midjourney-images/midjourney-image42.png" alt="Midjourney Image 42">
-            <img src="../images/midjourney-images/midjourney-image43.png" alt="Midjourney Image 43">
-            <img src="../images/midjourney-images/midjourney-image44.png" alt="Midjourney Image 44">
-            <img src="../images/midjourney-images/midjourney-image45.png" alt="Midjourney Image 45">
-            <img src="../images/midjourney-images/midjourney-image46.png" alt="Midjourney Image 46">
-            <img src="../images/midjourney-images/midjourney-image47.png" alt="Midjourney Image 47">
-            <img src="../images/midjourney-images/midjourney-image48.png" alt="Midjourney Image 48">
-            <img src="../images/midjourney-images/midjourney-image49.png" alt="Midjourney Image 49">
-            <img src="../images/midjourney-images/midjourney-image50.png" alt="Midjourney Image 50">
-            <img src="../images/midjourney-images/midjourney-image51.png" alt="Midjourney Image 51">
-            <img src="../images/midjourney-images/midjourney-image52.png" alt="Midjourney Image 52">
-            <img src="../images/midjourney-images/midjourney-image53.png" alt="Midjourney Image 53">
-            <img src="../images/midjourney-images/midjourney-image54.png" alt="Midjourney Image 54">
-            <img src="../images/midjourney-images/midjourney-image55.png" alt="Midjourney Image 55">
-            <img src="../images/midjourney-images/midjourney-image56.png" alt="Midjourney Image 56">
-            <img src="../images/midjourney-images/midjourney-image57.png" alt="Midjourney Image 57">
-            <img src="../images/midjourney-images/midjourney-image58.png" alt="Midjourney Image 58">
-            <img src="../images/midjourney-images/midjourney-image59.png" alt="Midjourney Image 59">
-            <img src="../images/midjourney-images/midjourney-image60.png" alt="Midjourney Image 60">
-            <img src="../images/midjourney-images/midjourney-image61.png" alt="Midjourney Image 61">
-            <img src="../images/midjourney-images/midjourney-image62.png" alt="Midjourney Image 62">
-            <img src="../images/midjourney-images/midjourney-image63.png" alt="Midjourney Image 63">
-            <img src="../images/midjourney-images/midjourney-image64.png" alt="Midjourney Image 64">
-            <img src="../images/midjourney-images/midjourney-image65.png" alt="Midjourney Image 65">
-            <img src="../images/midjourney-images/midjourney-image66.png" alt="Midjourney Image 66">
-            <img src="../images/midjourney-images/midjourney-image67.png" alt="Midjourney Image 67">
-            <img src="../images/midjourney-images/midjourney-image68.png" alt="Midjourney Image 68">
-            <img src="../images/midjourney-images/midjourney-image69.png" alt="Midjourney Image 69">
-            <img src="../images/midjourney-images/midjourney-image70.png" alt="Midjourney Image 70">
-            <img src="../images/midjourney-images/midjourney-image71.png" alt="Midjourney Image 71">
-            <img src="../images/midjourney-images/midjourney-image72.png" alt="Midjourney Image 72">
-            <img src="../images/midjourney-images/midjourney-image73.png" alt="Midjourney Image 73">
-            <img src="../images/midjourney-images/midjourney-image74.png" alt="Midjourney Image 74">
-            <img src="../images/midjourney-images/midjourney-image75.png" alt="Midjourney Image 75">
-        </div>
+    <div class="gallery">
+        <!-- JavaScript will insert images here -->
     </div>
+
+    <script>
+        const gallery = document.querySelector('.gallery');
+        for (let i = 1; i <= 75; i++) {
+            const img = document.createElement('img');
+            img.src = `images/midjourney-image${i}.png`;
+            img.alt = `Image ${i}`;
+            gallery.appendChild(img);
+        }
+    </script>
 </body>
 </html>
